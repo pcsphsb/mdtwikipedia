@@ -16,7 +16,7 @@
   <aside class="sidebar" id="sidebar">
     <div class="sidebar-header">
       <div class="logo-text">
-        <span class="logo-main">Management - Digitalization & Transformation M.A.</span>
+        <span class="logo-main">M.A. Management - Digitalization & Transformation</span>
         <span class="logo-sub">Student Wiki</span>
       </div>
       <button class="theme-toggle" id="themeToggle" title="Toggle light mode">☀</button>
@@ -24,25 +24,32 @@
 
     <nav class="sidebar-nav">
       <div class="nav-section">
-        <span class="nav-label">Core</span>
+        <span class="nav-label">Search</span>
+        <a href="#" class="nav-link" id="searchToggle">
+          <i class="fa-solid fa-magnifying-glass"></i> Search
+        </a>
+      </div>
+      <div class="nav-section">
+        <span class="nav-label">CORE</span>
         <a href="#home" class="nav-link active" data-page="home">Overview</a>
         <a href="#modules" class="nav-link" data-page="modules">Modules & Lectures</a>
         <a href="#professors" class="nav-link" data-page="professors">Professor Profiles</a>
       </div>
       <div class="nav-section">
-        <span class="nav-label">Student Life</span>
+        <span class="nav-label">STUDENT LIFE</span>
         <a href="#language" class="nav-link" data-page="language">Language Courses</a>
         <a href="#budget" class="nav-link" data-page="budget">Budgeting Guide</a>
         <a href="#faq" class="nav-link" data-page="faq">FAQ</a>
       </div>
       <div class="nav-section">
-        <span class="nav-label">Meta</span>
+        <span class="nav-label">ADMIN</span>
         <a href="#contribute" class="nav-link" data-page="contribute">Contribute</a>
       </div>
     </nav>
 
     <div class="sidebar-footer">
       <span>Built by students · Not affiliated with the university</span>
+      <span class="last-updated" id="lastUpdated">—</span>
     </div>
   </aside>
 
@@ -60,6 +67,16 @@
 
   <!-- MAIN CONTENT -->
   <main class="main" id="main">
+
+    <!-- SEARCH BAR -->
+    <div class="search-bar" id="searchBar">
+      <div class="search-wrap">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="searchInput" placeholder="Search modules, FAQ, professors..." />
+        <button class="search-clear" id="searchClear">×</button>
+      </div>
+      <div class="search-results" id="searchResults"></div>
+    </div>
 
     <!-- HOME PAGE -->
     <section class="page active" id="page-home">
@@ -88,39 +105,39 @@
 
       <div class="cards-grid">
         <div class="card clickable" data-goto="modules">
-          <div class="card-icon">⬡</div>
+          <div class="card-icon"><i class="fa-solid fa-book-open"></i></div>
           <h3>Modules &amp; Lectures</h3>
           <p>What to expect from each course? 
             Workload, Assessment style, and Student ratings.</p>
           <span class="card-arrow">→</span>
         </div>
         <div class="card clickable" data-goto="professors">
-          <div class="card-icon">◻</div>
+          <div class="card-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
           <h3>Professor Profiles</h3>
           <p>Teaching styles, exam approach, and communication methods.</p>
           <span class="card-arrow">→</span>
         </div>
         <div class="card clickable" data-goto="language">
-          <div class="card-icon">◇</div>
+          <div class="card-icon"><i class="fa-solid fa-language"></i></div>
           <h3>Language Courses</h3>
           <p>Where to find German courses, free options, university offerings, and online alternatives.</p>
           <span class="card-arrow">→</span>
         </div>
         <div class="card clickable" data-goto="budget">
-          <div class="card-icon">△</div>
+          <div class="card-icon"><i class="fa-solid fa-wallet"></i></div>
           <h3>Budgeting Guide</h3>
           <p>Real budgeting tips from students.</p>
           <span class="card-arrow">→</span>
         </div>
         <div class="card clickable" data-goto="faq">
-          <div class="card-icon">○</div>
+          <div class="card-icon"><i class="fa-solid fa-circle-question"></i></div>
           <h3>FAQ</h3>
           <p>Student Portals, Enrollment and Semester Information and Documents, 
             Bureaucracy, and anything under the sun answered honestly by people who've been through it.</p>
           <span class="card-arrow">→</span>
         </div>
         <div class="card clickable" data-goto="contribute">
-          <div class="card-icon">✦</div>
+          <div class="card-icon"><i class="fa-solid fa-code"></i></div>
           <h3>Contribute</h3>
           <p>Add your own notes, correct outdated info, or profile a professor you've experienced.
             Especially extracurricular courses that are not mandatory in the MDT curriculum.
@@ -348,9 +365,9 @@
 
         </div>
 
-        <div class="module-item" data-cat="core">
+        <div class="module-item" data-cat="core digital">
           <div class="module-meta">
-            <span class="module-tag">Core</span>
+            <span class="module-tag">Core · Digital</span>
             <div class="module-rating">
               <span class="stars">★★★★☆</span>
               <span class="rating-num">4.5</span>
@@ -766,53 +783,39 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
+            <tr data-low="300" data-mid="650" data-high="700">
               <td>Rent (incl. utilities)</td>
-              <td>~300</td>
-              <td>~650</td>
-              <td>~700+</td>
+              <td>~300</td><td>~650</td><td>~700+</td>
             </tr>
-            <tr>
+            <tr data-low="50" data-mid="100" data-high="300">
               <td>Groceries + Mensa*</td>
-              <td>~50</td>
-              <td>~100</td>
-              <td>~300+</td>
+              <td>~50</td><td>~100</td><td>~300+</td>
             </tr>
-            <tr>
+            <tr data-low="0" data-mid="0" data-high="0">
               <td>Transport (semester ticket)</td>
-              <td>**</td>
-              <td>**</td>
-              <td>**</td>
+              <td>**</td><td>**</td><td>**</td>
             </tr>
-            <tr>
+            <tr data-low="150" data-mid="150" data-high="150">
               <td>Health insurance</td>
-              <td>~150</td>
-              <td>?</td>
-              <td>?</td>
+              <td>~150</td><td>?</td><td>?</td>
             </tr>
-            <tr>
+            <tr data-low="5" data-mid="10" data-high="20">
               <td>Phone plan</td>
-              <td>~5</td>
-              <td>~10</td>
-              <td>~20+</td>
+              <td>~5</td><td>~10</td><td>~20+</td>
             </tr>
-            <tr>
+            <tr data-low="50" data-mid="150" data-high="300">
               <td>Going out / social</td>
-              <td>~50</td>
-              <td>~150</td>
-              <td>~300+</td>
+              <td>~50</td><td>~150</td><td>~300+</td>
             </tr>
-            <tr>
+            <tr data-low="10" data-mid="30" data-high="80">
               <td>Books / software</td>
-              <td>~10</td>
-              <td>~30</td>
-              <td>~80</td>
+              <td>~10</td><td>~30</td><td>~80</td>
             </tr>
-            <tr class="total-row">
+            <tr class="total-row" id="budget-total">
               <td><strong>Total estimate</strong></td>
-              <td><strong>~810</strong></td>
-              <td><strong>~1,230</strong></td>
-              <td><strong>~1,930+</strong></td>
+              <td id="total-low"></td>
+              <td id="total-mid"></td>
+              <td id="total-high"></td>
             </tr>
           </tbody>
         </table>
@@ -844,7 +847,7 @@
             <li><strong>Freelancing</strong>: allowed but check visa conditions if you're a non-EU student</li>
             <li><strong>Research assistant (HiWi)</strong>: university jobs, flexible, ~€13–15/hr, good CV material</li>
           </ul>
-          <div class="module-tip"><span>Student Tip:</span> If you have plans to have your Master Thesis in a companty, it's best to have student jobs related to company internships.</div>
+          <div class="module-tip"><span>Student Tip:</span> If you have plans to have your Master Thesis in a company, it's best to have student jobs related to company internships.</div>
           <div class="module-tip"><span>Non-EU note:</span> Check your visa conditions. Student visas usually allow 120 full days or 240 half-days per year of work.</div>
         </div>
 
@@ -955,7 +958,8 @@
 
         <div class="info-block highlight">
           <h3>How this wiki works</h3>
-          <p>This is a static HTML site hosted on GitHub + Netlify. To contribute, you'll need a GitHub account. No coding knowledge required — contributions are plain text.</p>
+          <p>This is a static HTML site hosted on GitHub. 
+            To contribute, you'll need a GitHub account.</p>
         </div>
 
         <div class="info-block">
@@ -963,16 +967,16 @@
           <ol class="wiki-list ordered">
             <li>Go to <a href="https://github.com/pcsphsb/mdtwikipedia" target="_blank">github.com/pcsphsb/mdtwikipedia</a></li>
             <li>Open the relevant HTML file (e.g. <code>index.html</code> for a module)</li>
-            <li>Click the pencil icon to edit</li>
+            <li>Click the pencil icon to edit.</li>
             <li>Make your changes. Follow the existing formatting pattern (please).</li>
             <li>Submit a pull request with a short description of what you changed</li>
           </ol>
         </div>
 
         <div class="info-block">
-          <h3>Option 2: Contact the maintainer</h3>
+          <h3>Option 2: Contact the Admin (me)</h3>
           <p>If you're not comfortable with GitHub, write up your addition (module notes, professor profile, FAQ answer) as plain text and send it to the current wiki maintainer.</p>
-          <p style="margin-top:0.75rem;">Contact: <em>mdtwikipedia@gmail.com</em></p>
+          <p style="margin-top:0.75rem;">Contact: <a href="mailto:mdtwikipedia@gmail.com">mdtwikipedia@gmail.com</a></p>
         </div>
 
         <div class="info-block">
@@ -989,10 +993,11 @@
         <div class="info-block">
           <h3>Ground rules</h3>
           <ul class="wiki-list">
-            <li>No full names of students or professors beyond initial+surname</li>
-            <li>Experience-based, write from what you've lived, not hearsay</li>
-            <li>No complaints disguised as reviews, constructive criticism only</li>
-            <li>Date your contributions so readers know how current they are</li>
+            <li><strong>RESPECT PRIVACY: INITIALS ONLY.</strong> Full names are strictly forbidden. Always follow the initials only rule.</li>
+            <li><strong>FACTUAL EXPERIENCES: KEEP IT PROFESSIONAL.</strong> Keep the experience related to the lecture, teaching style, or module content. Don't add anything that can be used to harm an individual's dignity.</li>
+            <li><strong>DATE YOUR CONTRIBUTIONS.</strong> To make reviews reliable and consistent, contributions should be timestamped. Contributions without a timestamp will be denied.</li>
+            <li><strong>CONSTRUCTIVE FEEDBACK ONLY.</strong> Not happy with a professor's teaching style? Found a module lacking? Your review must remain constructive. This is not for the university — it's for new students who want a better understanding of what they're enrolling in. Your feedback helps them raise better questions and expectations. (And don't forget, we always fill out an official evaluation form for our professors.)</li>
+            <li><strong>BE POLITE AND DON'T BE MEAN.</strong> No slurs, aggressive remarks, backhanded comments, or anything of the sort.</li>
           </ul>
         </div>
 
