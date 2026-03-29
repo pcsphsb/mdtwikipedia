@@ -119,7 +119,7 @@
   // ── Hash routing ───────────────────────────
   function routeFromHash() {
     const hash = window.location.hash.replace('#', '');
-    const validPages = ['home','modules','professors','language','budget','faq','contribute'];
+    const validPages = ['home','modules','professors','language','budget','faq','contribute','portals'];
     if (hash && validPages.includes(hash)) {
       showPage(hash);
     } else {
@@ -263,4 +263,34 @@
     })
     .catch(() => {});
 
+    // ── Lightbox ────────────────────────────────
+  const lightbox        = document.getElementById('lightbox');
+  const lightboxImg     = document.getElementById('lightboxImg');
+  const lightboxCaption = document.getElementById('lightboxCaption');
+  const lightboxClose   = document.getElementById('lightboxClose');
+
+  document.querySelectorAll('.screenshot-slot img').forEach(img => {
+    img.addEventListener('click', () => {
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+      lightboxCaption.textContent = img.alt;
+      lightbox.classList.add('visible');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  function closeLightbox() {
+    lightbox.classList.remove('visible');
+    document.body.style.overflow = '';
+    lightboxImg.src = '';
+  }
+
+  lightboxClose.addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) closeLightbox();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeLightbox();
+  });
+  
 })();
