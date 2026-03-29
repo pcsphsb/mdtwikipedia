@@ -16,7 +16,7 @@ Not affiliated with the university. No PR spin. Built and maintained by students
 | **Modules & Lectures** | Course breakdowns, workload, exam format, student tips |
 | **Professor Profiles** | Teaching styles, communication tips, honest assessments |
 | **Language Courses** | Where to find German courses (free and paid) |
-| **Budgeting Guide** | Real cost breakdown and student benefits |
+| **Budgeting Guide** | Real cost breakdowns and student benefits |
 | **FAQ** | Practical questions answered honestly |
 | **Contribute** | How to contribute to the wiki |
 
