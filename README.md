@@ -1,77 +1,95 @@
-# MDT Student Wiki
-
-An independent, student-run wiki for the **Master in Management — Digitalization and Transformation M.A.** at the **International Graduate Center, Hochschule Bremen**.
-
-Not affiliated with the university. No PR spin. Built and maintained by students, for students.
-
-🔗 **[View the wiki](https://pcsphsb.github.io/mdtwikipedia)**
+# ◈ MDT STUDENT WIKI
+### Master in Management — Digitalization and Transformation M.A.
+#### International Graduate Center · Hochschule Bremen
 
 ---
 
-## What's inside
+> *Not affiliated with the university.*
+> *Built and maintained by students, for students.*
 
-| Page | Description |
-|---|---|
-| **Overview** | Program summary and quick navigation |
-| **Modules & Lectures** | Course breakdowns, workload, exam format, student tips |
-| **Professor Profiles** | Teaching styles, communication tips, honest assessments |
-| **Language Courses** | Where to find German courses (free and paid) |
-| **Budgeting Guide** | Real cost breakdowns and student benefits |
-| **FAQ** | Practical questions answered honestly |
-| **Contribute** | How to contribute to the wiki |
+🔗 **[pcsphsb.github.io/mdtwikipedia](https://pcsphsb.github.io/mdtwikipedia)**
 
 ---
 
-## Tech stack
-
-Pure HTML / CSS / JS
-Hosted on **GitHub Pages**.
-
----
-
-## Run locally
-
-No setup needed. Just open `index.html` in your browser.
-
-```bash
-git clone https://github.com/pcsphsb/mdtwiki.git
-cd mdtwiki
-open index.html   # macOS
-# or double-click index.html on Windows
+```
+  ┌─────────────────────────────────────────────────────┐
+  │  WIKI INDEX                                         │
+  ├─────────────────────────────────────────────────────┤
+  │  01 — Overview          Program summary & nav       │
+  │  02 — Modules           Courses, exams, tips        │
+  │  03 — Professors        Teaching styles & comms     │
+  │  04 — Language          German courses, free & paid │
+  │  05 — Budget            Real costs, discounts       │
+  │  06 — FAQ               Honest answers              │
+  │  07 — Contribute        How to add content          │
+  └─────────────────────────────────────────────────────┘
 ```
 
 ---
 
-## Deploy your own copy
+## STACK
 
-1. Fork this repo
-2. Go to **Settings → Pages**
-3. Set source to `main` branch, `/ (root)` folder
-4. Save — your copy is live at `https://yourusername.github.io/mdtwiki`
+```
+HTML  ·  CSS  ·  JS  —  no framework, no build step
+Hosted on GitHub Pages
+```
 
 ---
 
-## Contributing
+## RUN LOCALLY
 
-This wiki is only as good as what students put into it.
+```bash
+git clone https://github.com/pcsphsb/mdtwikipedia.git
+cd mdtwikipedia
+# open index.html in your browser
+# Windows: double-click index.html
+# macOS:   open index.html
+```
 
-**Via GitHub (recommended):**
+---
+
+## DEPLOY YOUR OWN COPY
+
+```
+1. Fork this repo
+2. Settings → Pages
+3. Source: main branch · / (root)
+4. Save → live at https://yourusername.github.io/mdtwikipedia
+```
+
+---
+
+## CONTRIBUTING
+
+> This wiki is only as good as what students put into it.
+
+**Via GitHub:**
+```
 1. Fork the repo
-2. Edit `index.html` — find the relevant section and follow the existing pattern
-3. Open a pull request with a short description of what you changed
+2. Edit index.html — follow the existing pattern
+3. Open a pull request with a short description
+```
 
-**Not comfortable with GitHub?**  
-Write up your addition as plain text and open an [issue](https://github.com/pcsphsb/mdtwiki/issues) instead.
+**Not comfortable with GitHub?**
+Open an [issue](https://github.com/pcsphsb/mdtwikipedia/issues) and write your contribution as plain text.
 
 **Ground rules:**
-- No full names. STRICTLY initials only (e.g. *Prof. Dr. K. H*)
-- Experience-based. Write from what you've lived, not hearsay
-- Date your contributions so readers know how current they are
-- Constructive only. No complaints disguised as reviews
+```
+─ No full names! Initials + surname only
+─ Experience-based. Write from what you've lived
+─ Date your contributions
+─ Constructive only
+```
 
 ---
 
-## License
+## LICENSE
 
-Content is contributed by students for students.  
+```
+Content contributed by students for students.
 No rights reserved. Share freely.
+```
+
+---
+
+*"Sperging out about the annihilation of the human endeavour, or whatever."*
