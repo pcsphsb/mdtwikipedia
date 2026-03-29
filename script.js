@@ -1,5 +1,5 @@
 /* ============================================
-   MiM·DT Student Wiki — script.js
+   MDT Student Wiki
    ============================================ */
 
 (function () {
@@ -109,5 +109,18 @@
 
   window.addEventListener('hashchange', routeFromHash);
   routeFromHash();
+
+  // ── Voice bubble auto-summaries ────────────
+  document.querySelectorAll('.voice-bubble').forEach(bubble => {
+    const p = bubble.querySelector('p');
+    if (!p) return;
+
+    const fullText = p.textContent.trim();
+    const preview = fullText.split(' ').slice(0, 8).join(' ') + '...';
+
+    const summary = document.createElement('summary');
+    summary.textContent = `"${preview}"`;
+    bubble.insertBefore(summary, p);
+  });
 
 })();
