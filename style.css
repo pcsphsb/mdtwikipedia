@@ -516,6 +516,18 @@ body {
   display: none;
 }
 
+.module-item .voices-scroll {
+  flex-direction: column;
+  max-height: 100px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.module-item .voice-bubble {
+  max-width: 100%;
+  width: 100%;
+}
+
 .module-meta {
   display: flex;
   justify-content: space-between;
