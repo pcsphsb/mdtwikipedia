@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MDT STUDENT WIKIPEDIA</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&family=Barlow+Condensed:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <div class="logo-mark">◈</div>
+      <div class="logo-text">
+        <span class="logo-main">Management - Digitalization and Transformation M.A.</span>
+        <span class="logo-sub">Student Wiki</span>
+      </div>
+    </div>
+
+    <nav class="sidebar-nav">
+      <div class="nav-section">
+        <span class="nav-label">Core</span>
+        <a href="#home" class="nav-link active" data-page="home">Overview</a>
+        <a href="#modules" class="nav-link" data-page="modules">Modules & Lectures</a>
+        <a href="#professors" class="nav-link" data-page="professors">Professor Profiles</a>
+      </div>
+      <div class="nav-section">
+        <span class="nav-label">Student Life</span>
+        <a href="#language" class="nav-link" data-page="language">Language Courses</a>
+        <a href="#budget" class="nav-link" data-page="budget">Budgeting Guide</a>
+        <a href="#faq" class="nav-link" data-page="faq">FAQ</a>
+      </div>
+      <div class="nav-section">
+        <span class="nav-label">Meta</span>
+        <a href="#contribute" class="nav-link" data-page="contribute">Contribute</a>
+      </div>
+    </nav>
+
+    <div class="sidebar-footer">
+      <span>Built by students · Not affiliated with the university</span>
+    </div>
+  </aside>
+
+  <!-- MOBILE TOPBAR -->
+  <header class="topbar">
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <span class="topbar-title">MDT WIKI</span>
+    <div class="topbar-mark">◈</div>
+  </header>
+
+  <!-- OVERLAY -->
+  <div class="overlay" id="overlay"></div>
+
+  <!-- MAIN CONTENT -->
+  <main class="main" id="main">
+
+    <!-- HOME PAGE -->
+    <section class="page active" id="page-home">
+      <div class="page-hero">
+        <div class="hero-tag">Master in Management</div>
+        <h1 class="hero-title">Digitalization<br />&amp; Transformation M.A.</h1>
+        <p class="hero-sub">An independent student-run wiki. 
+          Practical knowledge, honest professor profiles, survival tips. 
+          Everything the official brochure won't tell you (maybe).</p>
+        <div class="hero-rule"></div>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-num">14</span>
+            <span class="stat-label">Modules documented</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">13+</span>
+            <span class="stat-label">Professor profiles</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">4</span>
+            <span class="stat-label">Language tracks</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cards-grid">
+        <div class="card clickable" data-goto="modules">
+          <div class="card-icon">⬡</div>
+          <h3>Modules &amp; Lectures</h3>
+          <p>What to expect from each course? 
+            Workload, Assessment style, and Student ratings.</p>
+          <span class="card-arrow">→</span>
+        </div>
+        <div class="card clickable" data-goto="professors">
+          <div class="card-icon">◻</div>
+          <h3>Professor Profiles</h3>
+          <p>Teaching styles, exam approach, and communication methods.</p>
+          <span class="card-arrow">→</span>
+        </div>
+        <div class="card clickable" data-goto="language">
+          <div class="card-icon">◇</div>
+          <h3>Language Courses</h3>
+          <p>Where to find German courses, free options, university offerings, and online alternatives.</p>
+          <span class="card-arrow">→</span>
+        </div>
+        <div class="card clickable" data-goto="budget">
+          <div class="card-icon">△</div>
+          <h3>Budgeting Guide</h3>
+          <p>Real budgeting tips from students.</p>
+          <span class="card-arrow">→</span>
+        </div>
+        <div class="card clickable" data-goto="faq">
+          <div class="card-icon">○</div>
+          <h3>FAQ</h3>
+          <p>Student Portals, Enrollment and Semester Information and Documents, 
+            Bureaucracy, and anything under the sun answered honestly by people who've been through it.</p>
+          <span class="card-arrow">→</span>
+        </div>
+        <div class="card clickable" data-goto="contribute">
+          <div class="card-icon">✦</div>
+          <h3>Contribute</h3>
+          <p>Add your own notes, correct outdated info, or profile a professor you've experienced.
+            Especially extracurricular courses that are not mandatory in the MDT curriculum.
+          </p>
+          <span class="card-arrow">→</span>
+        </div>
+      </div>
+
+      <div class="notice">
+        <span class="notice-tag">Note</span>
+        This wiki is <strong>not affiliated with the university</strong>. Content reflects personal student experiences and may be outdated. Verify critical information through official channels.
+      </div>
+    </section>
+
+    <!-- MODULES PAGE -->
+    <section class="page" id="page-modules">
+      <div class="page-header">
+        <div class="breadcrumb">Wiki / <span>Modules &amp; Lectures</span></div>
+        <h1>Modules &amp; Lectures</h1>
+        <p class="page-intro">
+          Course-by-course breakdown summarized into fun-sized description cards.
+          <br />Includes: Workload, exam format, and tips on what's actually useful.</p>
+
+          <p>&nbsp;</p>
+
+         <p class="page-intro">
+          Last updated: March 2026.</p>
+      </div>
+
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="core">Core</button>
+        <button class="filter-btn" data-filter="elective">Elective</button>
+        <button class="filter-btn" data-filter="digital">Digital</button>
+      </div>
+
+      <div class="modules-list">
+
+      <!--- FIRST SEMESTER --->
+
+        <div class="module-item" data-cat="core digital">
+          <div class="module-meta">
+            <span class="module-tag">Core · Digital</span>
+            <div class="module-rating">
+              <span class="stars">★★★★☆</span>
+              <span class="rating-num">4.5</span>
+            </div>
+          </div>
+          <h3 class="module-title">Business Models and Innovation</h3>
+          <p class="module-desc">
+            A reviw of the Business Model Canvas and a practical exploration of how digitalization is transforming traditional business models. 
+            Final project is a group business model pitch.</p>
+          <div class="module-details">
+            <span class="detail-tag"><i class="fa-solid fa-book"></i> All Class Activities will be related to the final output (Step-by-Step building).</span>
+            <span class="detail-tag"><i class="fa-solid fa-pen-to-square"></i> Business Model Pitch</span>
+            <span class="detail-tag"><i class="fa-solid fa-users"></i> Group project</span>
+          </div>
+          <div class="module-tip"><span>For Improvement:</span> Students gave feedback that the course could benefit having more topics on digitalization 
+            or how to canvas, plan, and strategize on making digital products.</div>
+          <div class="module-tip"><span>Student tip:</span> Find a partner/groupmate you know you have a good rapport with 
+            and similar business ideas.</div>
+        </div>
+
+        <div class="module-item" data-cat="core digital">
+          <div class="module-meta">
+            <span class="module-tag">Core · Digital</span>
+            <div class="module-rating">
+              <span class="stars">★★★★☆</span>
+              <span class="rating-num">4.5</span>
+            </div>
+          </div>
+          <h3 class="module-title">Supply Chain Management and Digital Transformation</h3>
+          <p class="module-desc"> 
+            Revisits the fundamentals of supply chain management with a focus on digital transformation. 
+            Case-study based with a mix of written and practical assessments. 
+            Final Assessment is through a research paper with a defense/presentation at the end.
+          </p>
+          <div class="module-details">
+            <span class="detail-tag"><i class="fa-solid fa-book"></i> Minimal Workload</span>
+            <span class="detail-tag"><i class="fa-solid fa-pen-to-square"></i> Research Paper and Defense</span>
+            <span class="detail-tag"><i class="fa-solid fa-users"></i> Individual Project with Group Activities</span>
+          </div>
+          <div class="module-tip"><span>For Improvement:</span> Students gave feedback that the course could benefit having more topics on digitalization 
+            and providing organizations that can help in building SCM related pitches.</div>
+          <div class="module-tip"><span>Student tip:</span> Ensure to pick a topic you find most comfortable with 
+            and have sufficient resources to support your research. Also keep track of time and deadlines.</div>
+        </div>
+
+        <div class="module-item" data-cat="core digital">
+          <div class="module-meta">
+            <span class="module-tag">Core · Digital</span>
+            <div class="module-rating">
+              <span class="stars">★★★★☆</span>
+              <span class="rating-num">4.0</span>
+            </div>
+          </div>
+          <h3 class="module-title">Digital Sales and Marketing Strategies</h3>
+          <p class="module-desc">Revisits the fundamentals of digital sales and marketing with a focus on emerging trends and technologies. 
+            Final exam is a multiple-choice traditional assessment</p>
+          <div class="module-details">
+            <span class="detail-tag"><i class="fa-solid fa-book"></i> With Group Recap Activities (Reach group is assigned to discuss the previous day's lectures) </span>
+            <span class="detail-tag"><i class="fa-solid fa-pen-to-square"></i> Traditional exam</span>
+            <span class="detail-tag"><i class="fa-solid fa-users"></i> With case studies and class activities</span>
+          </div>
+          <div class="module-tip"><span>For Improvement:</span> Students gave feedback that the course could benefit having more topics on digitalization 
+            and having more practical applications instead of just theoretical concepts.</div>
+          <div class="module-tip"><span>Student tip:</span> Take notes and study your notes carefully.</div>
+        </div>
+
+        <div class="module-item" data-cat="core digital">
+          <div class="module-meta">
+            <span class="module-tag">Core · Digital</span>
+            <div class="module-rating">
+              <span class="stars">★★★★☆</span>
+              <span class="rating-num">4.5</span>
+            </div>
+          </div>
+          <h3 class="module-title">Cyber Risks and Data Protection</h3>
+          <p class="module-desc">An introduction to the EU Data Privacy Regulations, the GDPR and relevant compliance frameworks. 
+            Highly compact module that will require intensive studying especially if you are not familiar with legal fields..</p>
+          <div class="module-details">
+            <span class="detail-tag"><i class="fa-solid fa-book"></i> Moderate Workload</span>
+            <span class="detail-tag"><i class="fa-solid fa-pen-to-square"></i> Final Essay and Case Study with Presentation</span>
+            <span class="detail-tag"><i class="fa-solid fa-users"></i> Individual and Group Projects</span>
+          </div>
+          <div class="module-tip"><span>For Improvement:</span> Due to the intensive nature of the module, students provided feedback 
+            to allocate more time for studying and reviewing the material.</div>
+          <div class="module-tip"><span>Student tip:</span> Engage well in the class and read ahead.</div>
+        </div>
+
+        <div class="module-item" data-cat="core">
+          <div class="module-meta">
+            <span class="module-tag">Core</span>
+            <div class="module-rating">
+              <span class="stars">★★★★☆</span>
+              <span class="rating-num">4.5</span>
+            </div>
+          </div>
+          <h3 class="module-title">Data Science and Methods</h3>
+          <p class="module-desc">Multi-faceted module covering statistical analysis, machine learning, and data visualization 
+            techniques for the Data Science portion and research methods and databases for academic purposes.</p>
+          <div class="module-details">
+            <span class="detail-tag"><i class="fa-solid fa-book"></i> Moderate Workload</span>
+            <span class="detail-tag"><i class="fa-solid fa-pen-to-square"></i> Written exam combinign the lessons of 4 Professors</span>
+            <span class="detail-tag"><i class="fa-solid fa-users"></i> Class Activites, Case Studies, Group Works, and Homeworks</span>
+          </div>
+          <div class="module-tip"><span>For Improvement:</span> The class was split into 2 parts with 2 professors each part. 
+            Students provided feedback that it could be improved on scheduling and creating a comprehensive timeline.</div>
+          <div class="module-tip"><span>Student tip:</span> Always practice the code.</div>
+        </div>
+
+        <div class="module-item" data-cat="elective">
+          <div class="module-meta">
+            <span class="module-tag">Elective</span>
+            <div class="module-rating">
+              <span class="stars">★★★★★</span>
+              <span class="rating-num">5.0</span>
+            </div>
+          </div>
+          <h3 class="module-title">Communication & Presentation</h3>
+          <p class="module-desc">An elective module to the MDT students to hone their presentation skills 
+            in public speaking and presentation material formatting and writing.</p>
+          <div class="module-details">
+            <span class="detail-tag"><i class="fa-solid fa-sync"></i> Short Course</span>
+            <span class="detail-tag"><i class="fa-solid fa-users"></i> Individual and Group Presentations</span>
+            <span class="detail-tag"><i class="fa-solid fa-film"></i> Some Class Activities</span>
+          </div>
+          <div class="module-tip"><span>For Improvement:</span> Overall, the elective course was beneficial to students 
+            and there were no particular necessity for improvement.</div>
+          <div class="module-tip"><span>Student tip:</span> Commit to your prototype early — pivoting too late kills your grade.</div>
+        </div>
+
+        <!--- SECOND SEMESTER --->
+
+        <div class="module-item" data-cat="digital elective">
+          <div class="module-meta">
+            <span class="module-tag">Elective · Digital</span>
+            <div class="module-rating">
+              <span class="stars">★★★★★</span>
+              <span class="rating-num">4.8</span>
+            </div>
+          </div>
+          <h3 class="module-title">NAME</h3>
+          <p class="module-desc">LOREM IPSUM</p>
+          <div class="module-details">
+            <span class="detail-tag"><i class="fa-solid fa-desktop"></i> Applied / hands-on</span>
+            <span class="detail-tag"><i class="fa-solid fa-chart-bar"></i> Dashboard project</span>
+            <span class="detail-tag"><i class="fa-solid fa-check-circle"></i> No written exam</span>
+          </div>
+          <div class="module-tip"><span>Student tip:</span> lorem ipsum.</div>
+        </div>
+
+        <div class="module-item" data-cat="core">
+          <div class="module-meta">
+            <span class="module-tag">Core</span>
+            <div class="module-rating">
+              <span class="stars">★★★☆☆</span>
+              <span class="rating-num">2.9</span>
+            </div>
+          </div>
+          <h3 class="module-title">NAME</h3>
+          <p class="module-desc">LOREM IPSUM</p>
+          <div class="module-details">
+            <span class="detail-tag"><i class="fa-solid fa-book"></i> Medium workload</span>
+            <span class="detail-tag"><i class="fa-solid fa-file-lines"></i> Closed-book exam</span>
+          </div>
+          <div class="module-tip"><span>Student tip:</span> lorem ipsum.</div>
+        </div>
+
+        <div class="module-item" data-cat="elective digital">
+          <div class="module-meta">
+            <span class="module-tag">Elective · Digital</span>
+            <div class="module-rating">
+              <span class="stars">★★★★☆</span>
+              <span class="rating-num">4.3</span>
+            </div>
+          </div>
+          <h3 class="module-title">NAME</h3>
+          <p class="module-desc">LOREM IPSUM</p>
+          <div class="module-details">
+            <span class="detail-tag"><i class="fa-solid fa-robot"></i> Conceptual</span>
+            <span class="detail-tag"><i class="fa-solid fa-list-check"></i> Consulting report</span>
+            <span class="detail-tag"><i class="fa-solid fa-microphone"></i> Guest speakers</span>
+          </div>
+          <div class="module-tip"><span>Student tip:</span> lorem ipsum.</div>
+        </div>
+
+      </div>
+
+      <div class="contribute-cta">
+        <p>Missing a module? <a href="#contribute" class="nav-link-inline" data-page="contribute">Add it →</a></p>
+      </div>
+    </section>
+
+    <!-- PROFESSORS PAGE -->
+    <section class="page" id="page-professors">
+      <div class="page-header">
+        <div class="breadcrumb">Wiki / <span>Professor Profiles</span></div>
+        <h1>Professor Profiles</h1>
+        <p class="page-intro">Teaching method, exam philosophy, communication style (from a student perspective, not a CV).</p>
+      </div>
+
+      <div class="prof-grid">
+
+        <div class="prof-card">
+          <div class="prof-header">
+            <div class="prof-avatar">XX</div>
+            <div class="prof-info">
+              <h3>Prof. Dr. NAME</h3>
+              <span class="prof-module">SUBJECT</span>
+            </div>
+            <div class="prof-score">5.0</div>
+          </div>
+          <div class="prof-tags">
+            <span class="ptag">Recitation?</span>
+            <span class="ptag">Case-studies?</span>
+            <span class="ptag">Socratic?</span>
+          </div>
+          <div class="prof-section">
+            <h4>Teaching Style</h4>
+            <p>Do they like recitation? Do they prefer case studies or a more interactive approach? Do they hate passive audiences?</p>
+          </div>
+          <div class="prof-section">
+            <h4>Exam / Assessment</h4>
+            <p>What is the final assessment format? Is it a written exam, a project, or a combination of both?</p>
+          </div>
+          <div class="prof-section">
+            <h4>How to communicate</h4>
+            <p>How to contact them and do they respond to different communication channels? How fast do they respond?</p>
+          </div>
+          <div class="prof-quote">"QUOTE"</div>
+        </div>
+
+        <div class="prof-card">
+          <div class="prof-header">
+            <div class="prof-avatar">XX</div>
+            <div class="prof-info">
+              <h3>Prof. Dr. NAME</h3>
+              <span class="prof-module">SUBJECT</span>
+            </div>
+            <div class="prof-score">5.0</div>
+          </div>
+          <div class="prof-tags">
+            <span class="ptag">Recitation?</span>
+            <span class="ptag">Case-studies?</span>
+            <span class="ptag">Socratic?</span>
+          </div>
+          <div class="prof-section">
+            <h4>Teaching Style</h4>
+            <p>Do they like recitation? Do they prefer case studies or a more interactive approach? Do they hate passive audiences?</p>
+          </div>
+          <div class="prof-section">
+            <h4>Exam / Assessment</h4>
+            <p>What is the final assessment format? Is it a written exam, a project, or a combination of both?</p>
+          </div>
+          <div class="prof-section">
+            <h4>How to communicate</h4>
+            <p>How to contact them and do they respond to different communication channels? How fast do they respond?</p>
+          </div>
+          <div class="prof-quote">"QUOTE"</div>
+        </div>
+
+        <div class="prof-card">
+          <div class="prof-header">
+            <div class="prof-avatar">XX</div>
+            <div class="prof-info">
+              <h3>Prof. Dr. NAME</h3>
+              <span class="prof-module">SUBJECT</span>
+            </div>
+            <div class="prof-score">5.0</div>
+          </div>
+          <div class="prof-tags">
+            <span class="ptag">Recitation?</span>
+            <span class="ptag">Case-studies?</span>
+            <span class="ptag">Socratic?</span>
+          </div>
+          <div class="prof-section">
+            <h4>Teaching Style</h4>
+            <p>Do they like recitation? Do they prefer case studies or a more interactive approach? Do they hate passive audiences?</p>
+          </div>
+          <div class="prof-section">
+            <h4>Exam / Assessment</h4>
+            <p>What is the final assessment format? Is it a written exam, a project, or a combination of both?</p>
+          </div>
+          <div class="prof-section">
+            <h4>How to communicate</h4>
+            <p>How to contact them and do they respond to different communication channels? How fast do they respond?</p>
+          </div>
+          <div class="prof-quote">"QUOTE"</div>
+        </div>
+
+        <div class="prof-card">
+          <div class="prof-header">
+            <div class="prof-avatar">XX</div>
+            <div class="prof-info">
+              <h3>Prof. Dr. NAME</h3>
+              <span class="prof-module">SUBJECT</span>
+            </div>
+            <div class="prof-score">5.0</div>
+          </div>
+          <div class="prof-tags">
+            <span class="ptag">Recitation?</span>
+            <span class="ptag">Case-studies?</span>
+            <span class="ptag">Socratic?</span>
+          </div>
+          <div class="prof-section">
+            <h4>Teaching Style</h4>
+            <p>Do they like recitation? Do they prefer case studies or a more interactive approach? Do they hate passive audiences?</p>
+          </div>
+          <div class="prof-section">
+            <h4>Exam / Assessment</h4>
+            <p>What is the final assessment format? Is it a written exam, a project, or a combination of both?</p>
+          </div>
+          <div class="prof-section">
+            <h4>How to communicate</h4>
+            <p>How to contact them and do they respond to different communication channels? How fast do they respond?</p>
+          </div>
+          <div class="prof-quote">"QUOTE"</div>
+        </div>
+
+      </div>
+
+      <div class="contribute-cta">
+        <p>Know a professor not listed? <a href="#contribute" class="nav-link-inline" data-page="contribute">Add a profile →</a></p>
+      </div>
+    </section>
+
+    <!-- LANGUAGE PAGE -->
+    <section class="page" id="page-language">
+      <div class="page-header">
+        <div class="breadcrumb">Wiki / <span>Language Courses</span></div>
+        <h1>Language Courses</h1>
+        <p class="page-intro">
+          German proficiency is not required for the program, but it helps enormously for daily life and if you have plans to stay in Germany after your studies. 
+          Here's where to find courses, both free and paid.</p>
+      </div>
+
+      <div class="info-blocks">
+
+        <div class="info-block highlight">
+          <h3>University Language Center (SZHB) - Sprachenzentrum Bremen</h3>
+          <p>All students enrolled in public universities are eligible to apply to the SZHB Bremen. 
+            As an enrolled student, the courses are significantly cheaper than private options. 
+            Register early (look at the website news for the dates of registration). 
+            Spots fill in the first week as per experience.</p>
+          <ul class="wiki-list">
+            <li>Go to: <a href="https://www.uni-bremen.de/sprachenzentrum-der-hochschulen-im-land-bremen/sprachenzentrum-szhb">
+              https://www.uni-bremen.de/sprachenzentrum-der-hochschulen-im-land-bremen/sprachenzentrum-szhb
+            </a></li>
+            <li>In the Header Menu Bar: <b>Click "Quicklinks" -> "German"</b></li>
+            <li>In the new page: <b>Click "Go directly to our German Courses"</b></li>
+            <li>In the new page: Either (1) <b>Click the Overview of Courses</b> or 
+              (2) <b>Take the appripriate Placement Test for HSB Students</b></li>
+            <li>Levels: A1 through C1 typically offered</li>
+            <li>In-person, online, and hybrid options available. However majority are In-person.</li>
+          </ul>
+        </div>
+
+        <div class="info-block">
+          <h3>Free Online Options</h3>
+          <ul class="wiki-list">
+            <li><strong>Deutsche Welle (DW Learn German)</strong>: excellent structured free course, A1–B1</li>
+            <li><strong>Duolingo</strong>: supplement only; not sufficient as standalone</li>
+            <li><strong>Goethe Institut Online</strong>: quality materials, some free resources</li>
+          </ul>
+        </div>
+
+        <div class="info-block">
+          <h3>Paid Intensive Courses</h3>
+          <ul class="wiki-list">
+            <li><strong>Goethe Institut</strong> — gold standard, expensive (~€300–600/course) but recognized</li>
+            <li><strong>Volkshochschule (VHS)</strong> — city adult education centers, affordable (~€100–200), excellent quality</li>
+            <li><strong>Campus German</strong> — has intensive courses and a free language cafe</li>
+          </ul>
+          <div class="module-tip" style="margin-top: 1rem;"><span>Tip:</span> VHS is the best value for money — it's not a tourist school. Real local instruction at city-subsidized prices.</div>
+        </div>
+
+        <div class="info-block">
+          <h3>Tandem &amp; Exchange / Language Cafes</h3>
+          <p>Many universities run a <strong>Tandem program</strong> — you teach your native language to a German speaker, they teach you German. Completely free and often the fastest way to get conversational.</p>
+          <ul class="wiki-list">
+            <li>Check the International Office or language center for sign-ups</li>
+            <li>Apps: Tandem, HelloTalk, Speaky</li>
+            <li>Campus German offers free language cafes that are hosted weekly.</li>
+          </ul>
+        </div>
+
+        <div class="info-block">
+          <h3>Other Languages Offered</h3>
+          <p>SZHB centers typically offer Spanish, French, Mandarin, Italian, Japanese, Arabic, and others. 
+            Same registration rules apply. Check your SZHB portal.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- BUDGET PAGE -->
+    <section class="page" id="page-budget">
+      <div class="page-header">
+        <div class="breadcrumb">Wiki / <span>Budgeting Guide</span></div>
+        <h1>Budgeting Guide</h1>
+        <p class="page-intro">Real numbers collected and averages from existing/current students.</p>
+      </div>
+
+      <div class="budget-table-wrap">
+        <h3>Monthly Cost Breakdown</h3>
+        <table class="budget-table">
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Low (€)</th>
+              <th>Mid (€)</th>
+              <th>High (€)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Rent (incl. utilities)</td>
+              <td>~300</td>
+              <td>~650</td>
+              <td>~700+</td>
+            </tr>
+            <tr>
+              <td>Groceries</td>
+              <td>~20</td>
+              <td>~100</td>
+              <td>~300+</td>
+            </tr>
+            <tr>
+              <td>Transport (semester ticket)</td>
+              <td>*</td>
+              <td>*</td>
+              <td>*</td>
+            </tr>
+            <tr>
+              <td>Health insurance</td>
+              <td>TK Insurance: ~150</td>
+              <td>?</td>
+              <td>?</td>
+            </tr>
+            <tr>
+              <td>Phone plan</td>
+              <td>~5</td>
+              <td>~10</td>
+              <td>~20+</td>
+            </tr>
+            <tr>
+              <td>Going out / social</td>
+              <td>~50</td>
+              <td>~150</td>
+              <td>~300+</td>
+            </tr>
+            <tr>
+              <td>Books / software</td>
+              <td>~10</td>
+              <td>~30</td>
+              <td>~80</td>
+            </tr>
+            <tr class="total-row">
+              <td><strong>Total estimate</strong></td>
+              <td><strong>~810</strong></td>
+              <td><strong>~1,230</strong></td>
+              <td><strong>~1,930+</strong></td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="table-note">* Semester ticket is free to all enrolled and valid students, 
+          however, this does NOT include ICE Trains; fees for bike space in the bus/tram/train; or pets</p>
+      </div>
+
+      <div class="info-blocks">
+
+        <div class="info-block">
+          <h3>Student Discounts Worth Knowing</h3>
+          <ul class="wiki-list">
+            <li><strong>Museen, Kinos, Theater</strong>: Check the website for student discounts or free for students. 
+              Our enrollment and Student ID includes a "Kultursemesterticket". 
+              Though ther eis no QR Code, simply showing your ID for verification is enough.</li>
+            <li><strong>GitHub Student Developer Pack</strong>: Our email domain "@stud.hs-bremen.de" gives access to a range of developer tools and resources at reduced or no cost.</li>
+          </ul>
+        </div>
+
+        <div class="info-block">
+          <h3>Side Income Options</h3>
+          <ul class="wiki-list">
+            <li><strong>Working student (Werkstudent)/Minijob/Part-time Job</strong>: up to 20h/week during semester, tax-advantaged. Most common and recommended. Look for HiWi positions at university too.</li>
+            <li><strong>Freelancing</strong>: allowed but check visa conditions if you're a non-EU student</li>
+            <li><strong>Research assistant (HiWi)</strong>: university jobs, flexible, ~€13–15/hr, good CV material</li>
+          </ul>
+          <div class="module-tip"><span>Student Tip:</span> If you have plans to have your Master Thesis in a companty, it's best to have student jobs related to company internships.</div>
+          <div class="module-tip"><span>Non-EU note:</span> Check your visa conditions. Student visas usually allow 120 full days or 240 half-days per year of work.</div>
+        </div>
+
+        <div class="info-block">
+          <h3>Funding &amp; Scholarships</h3>
+          <ul class="wiki-list">
+            <li><strong>Deutschlandstipendium</strong>: €300/month, apply through your university</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FAQ PAGE -->
+    <section class="page" id="page-faq">
+      <div class="page-header">
+        <div class="breadcrumb">Wiki / <span>FAQ</span></div>
+        <h1>FAQ</h1>
+        <p class="page-intro">Honest answers to real questions. No PR spin.</p>
+      </div>
+
+      <div class="faq-list">
+
+        <details class="faq-item">
+          <summary>Is the program fully in English?</summary>
+          <div class="faq-body">Yes. all core lectures are in English. 
+            However, HSB offers extra modules for added ECTS and skills but are hosted in German.
+            Some/Majority of administrative processes will be in German. 
+            Basic German is strongly recommended for daily life.</div>
+        </details>
+
+        <details class="faq-item">
+          <summary>How hard is it to find housing?</summary>
+          <div class="faq-body">Everywhere will be difficult. The more specific you are with the housing you want, the harder it will be.
+            Start looking 3–4 months before. 
+            Student dorms (Studierendenwerk) are the cheapest (with private studios costing as low as 300€).
+            Some students applied even before getting an acceptance letter due to the long waiting times.
+            WG-Gesucht, and Immoscout24 are the main platforms. Scams exist. never pay a deposit before seeing a contract.</div>
+        </details>
+
+        <details class="faq-item">
+          <summary>What GPA / grades do I need to pass?</summary>
+          <div class="faq-body">The German grading scale runs 1.0 (best) to 5.0 (fail). 
+            You typically need at least 4.0 to pass a module. 
+            A 2.0–2.5 is considered satisfactory. A 1.6-1.9 is good. 
+            A 1.0-1.5 is very good. Ask your program coordinator for the exact rules, fail policies may vary.</div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Can I work while studying?</summary>
+          <div class="faq-body">EU students: yes, freely. 
+            Non-EU students on a student visa: up to 120 full days or 240 half-days per year. 
+            Working student (Werkstudent) contracts are the standard structure, they're tax-efficient and legal. 
+            Check with the Ausländerbehörde if unsure about your visa conditions.</div>
+        </details>
+
+        <details class="faq-item">
+          <summary>What's the networking like?</summary>
+          <div class="faq-body">It depends on how much you put in. 
+            Cohort size is usually small enough that everyone knows each other. 
+            Consulting and tech company visits are common, 
+            but the ISA Team of IGC regularly hosts events and activites for multiple programs to connect with each other.
+            Alumni networks vary in quality. MDT is a fairly new course so alumnis are not quite established yet.
+            Student clubs (e.g. case study clubs, consulting clubs) are worth joining early.</div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Are exams retakeable?</summary>
+          <div class="faq-body">Generally, yes. A second failure has more serious consequences. 
+            Your program coordinator can walk you through it.</div>
+        </details>
+
+        <details class="faq-item">
+          <summary>How do I get a Anmeldung (city registration)?</summary>
+          <div class="faq-body">You must register your address at the local Einwohnermeldeamt within 14 days of moving in. 
+            Book an appointment online. You need: passport, rental contract or landlord confirmation (Wohnungsgeberbestätigung). 
+            This unlocks your bank account, health insurance, and tax ID.</div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Do I need a German bank account?</summary>
+          <div class="faq-body">Yes, for practical purposes. Most landlords require a German bank account for rent. </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Is the thesis / capstone project manageable alongside coursework?</summary>
+          <div class="faq-body">Currently, the program is designed to have Thesis to be at the last semester as a stand-alone 
+            in order for students to focus on it.</div>
+        </details>
+
+      </div>
+    </section>
+
+    <!-- CONTRIBUTE PAGE -->
+    <section class="page" id="page-contribute">
+      <div class="page-header">
+        <div class="breadcrumb">Wiki / <span>Contribute</span></div>
+        <h1>Contribute</h1>
+        <p class="page-intro">
+          This wiki is only as good as what students put into it. 
+          Everything exeternally contributed will be verified and checked for accuracy and ground rule compliance 
+          before being added to the main content. </p>
+        <p>
+          Here's how to add, correct, or update content.</p>
+      </div>
+
+      <div class="info-blocks">
+
+        <div class="info-block highlight">
+          <h3>How this wiki works</h3>
+          <p>This is a static HTML site hosted on GitHub + Netlify. To contribute, you'll need a GitHub account. No coding knowledge required — contributions are plain text.</p>
+        </div>
+
+        <div class="info-block">
+          <h3>Option 1: GitHub (recommended)</h3>
+          <ol class="wiki-list ordered">
+            <li>Go to <a href="https://github.com/pcsphsb/mdtwikipedia" target="_blank">github.com/pcsphsb/mdtwikipedia</a></li>
+            <li>Open the relevant HTML file (e.g. <code>index.html</code> for a module)</li>
+            <li>Click the pencil icon to edit</li>
+            <li>Make your changes. Follow the existing formatting pattern (please).</li>
+            <li>Submit a pull request with a short description of what you changed</li>
+          </ol>
+        </div>
+
+        <div class="info-block">
+          <h3>Option 2: Contact the maintainer</h3>
+          <p>If you're not comfortable with GitHub, write up your addition (module notes, professor profile, FAQ answer) as plain text and send it to the current wiki maintainer.</p>
+          <p style="margin-top:0.75rem;">Contact: <em>mdtwikipedia@gmail.com</em></p>
+        </div>
+
+        <div class="info-block">
+          <h3>What to contribute</h3>
+          <ul class="wiki-list">
+            <li>Module notes: workload, tips, exam format</li>
+            <li>Professor profiles: teaching style, how to communicate</li>
+            <li>FAQ answers: questions you had that weren't answered anywhere</li>
+            <li>Budget corrections: costs change, help keep numbers accurate</li>
+            <li>Language course reviews: which ones actually worked?</li>
+          </ul>
+        </div>
+
+        <div class="info-block">
+          <h3>Ground rules</h3>
+          <ul class="wiki-list">
+            <li>No full names of students or professors beyond initial+surname</li>
+            <li>Experience-based, write from what you've lived, not hearsay</li>
+            <li>No complaints disguised as reviews, constructive criticism only</li>
+            <li>Date your contributions so readers know how current they are</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
