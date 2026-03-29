@@ -516,15 +516,17 @@ body {
 }
 
 .module-item .voices-scroll {
-  flex-direction: column;
-  max-height: 100px;
-  overflow-y: auto;
+  display: flex !important;
+  flex-direction: column !important;
+  max-height: 150px;
+  overflow-y: auto !important;
   overflow-x: hidden;
 }
 
 .module-item .voice-bubble {
-  max-width: 100%;
+  max-width: 100% !important;
   width: 100%;
+  flex-shrink: 0;
 }
 
 .module-meta {
