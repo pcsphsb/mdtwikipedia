@@ -21,6 +21,39 @@
   --font-mono: 'Space Mono', monospace;
 }
 
+/* ── Theme toggle ── */
+.theme-toggle {
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 0.85rem;
+  padding: 0.25rem 0.45rem;
+  flex-shrink: 0;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.theme-toggle:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+/* ── Light mode overrides ── */
+body.light {
+  --bg: #f5f5f0;
+  --bg-2: #ebebе6;
+  --bg-3: #e0e0db;
+  --bg-4: #d5d5d0;
+  --border: #ccccс7;
+  --border-light: #bbbbб6;
+  --text: #1a1a1a;
+  --text-muted: #444444;
+  --text-dim: #888888;
+  --accent: #7a5c3a;
+  --accent-dim: #9a7a5a;
+  --white: #111111;
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
