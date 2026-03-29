@@ -4,7 +4,7 @@ An independent, student-run wiki for the **Master in Management — Digitalizati
 
 Not affiliated with the university. No PR spin. Built and maintained by students, for students.
 
-🔗 **[View the wiki](https://pcsphsb.github.io/mdtwiki)**
+🔗 **[View the wiki](https://pcsphsb.github.io/mdtwikipedia)**
 
 ---
 
