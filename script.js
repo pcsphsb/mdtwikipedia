@@ -119,7 +119,7 @@
   // ── Hash routing ───────────────────────────
   function routeFromHash() {
     const hash = window.location.hash.replace('#', '');
-    const validPages = ['home','modules','professors','language','budget','faq','contribute','portals'];
+    const validPages = ['home','modules','professors','language','budget','faq','contribute','portals','schedule','glossary','links'];
     if (hash && validPages.includes(hash)) {
       showPage(hash);
     } else {
@@ -142,6 +142,28 @@
     summary.textContent = `"${preview}"`;
     bubble.insertBefore(summary, p);
   });
+
+  // ── Schedule view toggle ────────────────────
+  const weeklyBtn   = document.getElementById('weeklyBtn');
+  const monthlyBtn  = document.getElementById('monthlyBtn');
+  const weeklyView  = document.getElementById('weeklyView');
+  const monthlyView = document.getElementById('monthlyView');
+
+  if (weeklyBtn && monthlyBtn) {
+    weeklyBtn.addEventListener('click', () => {
+      weeklyView.classList.remove('hidden');
+      monthlyView.classList.add('hidden');
+      weeklyBtn.classList.add('active');
+      monthlyBtn.classList.remove('active');
+    });
+
+    monthlyBtn.addEventListener('click', () => {
+      monthlyView.classList.remove('hidden');
+      weeklyView.classList.add('hidden');
+      monthlyBtn.classList.add('active');
+      weeklyBtn.classList.remove('active');
+    });
+  }
 
   // ── Theme toggle ───────────────────────────
   const themeToggle = document.getElementById('themeToggle');
@@ -250,6 +272,27 @@
     if (e.key === 'Escape') closeSearch();
   });
 
+  // ── Glossary search ─────────────────────────
+  const glossarySearch = document.getElementById('glossarySearch');
+
+  if (glossarySearch) {
+    glossarySearch.addEventListener('input', () => {
+      const q = glossarySearch.value.toLowerCase().trim();
+      document.querySelectorAll('.glossary-item').forEach(item => {
+        const term = item.querySelector('.gterm').textContent.toLowerCase();
+        const def  = item.querySelector('.gdef').textContent.toLowerCase();
+        item.classList.toggle('hidden', q && !term.includes(q) && !def.includes(q));
+      });
+
+      // Hide empty sections
+      document.querySelectorAll('.glossary-section').forEach(section => {
+        const visible = [...section.querySelectorAll('.glossary-item')]
+          .some(i => !i.classList.contains('hidden'));
+        section.style.display = visible ? '' : 'none';
+      });
+    });
+  }
+
   // ── Last updated via GitHub API ─────────────
   fetch('https://api.github.com/repos/pcsphsb/mdtwikipedia/commits?per_page=1')
     .then(r => r.json())
@@ -292,5 +335,29 @@
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') closeLightbox();
   });
-  
+
+  // ── Auto-span last card in grid ─────────────
+  function fixLastCard() {
+    const grid = document.querySelector('.cards-grid');
+    if (!grid) return;
+
+    const cards = [...grid.querySelectorAll('.card')];
+    const last = cards[cards.length - 1];
+    if (!last) return;
+
+    // Reset first
+    last.style.gridColumn = '';
+
+    // Get computed column count
+    const cols = getComputedStyle(grid).gridTemplateColumns.split(' ').length;
+    const remainder = cards.length % cols;
+
+    if (remainder !== 0) {
+      last.style.gridColumn = `span ${cols - remainder + 1}`;
+    }
+  }
+
+  fixLastCard();
+  window.addEventListener('resize', fixLastCard);
+
 })();

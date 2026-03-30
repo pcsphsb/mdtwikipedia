@@ -41,7 +41,13 @@
         <span class="nav-label">STUDENT LIFE</span>
         <a href="#language" class="nav-link" data-page="language">Language Courses</a>
         <a href="#budget" class="nav-link" data-page="budget">Budgeting Guide</a>
+        <a href="#schedule" class="nav-link" data-page="schedule">Schedule</a>
+      </div>
+      <div class="nav-section">
+        <span class="nav-label">Resources</span>
         <a href="#faq" class="nav-link" data-page="faq">FAQ</a>
+        <a href="#glossary" class="nav-link" data-page="glossary">Glossary</a>
+        <a href="#links" class="nav-link" data-page="links">Useful Links</a>
       </div>
       <div class="nav-section">
         <span class="nav-label">ADMIN</span>
@@ -125,17 +131,41 @@
           <p>Where to find German courses, free options, university offerings, and online alternatives.</p>
           <span class="card-arrow">→</span>
         </div>
+        <div class="card clickable" data-goto="portals">
+          <div class="card-icon"><i class="fa-solid fa-globe"></i></div>
+          <h3>Student Portals</h3>
+          <p>CampIno, AULIS, Webmail, FullFabric, and ISA appointments.</p>
+          <span class="card-arrow">→</span>
+        </div>
         <div class="card clickable" data-goto="budget">
           <div class="card-icon"><i class="fa-solid fa-wallet"></i></div>
           <h3>Budgeting Guide</h3>
           <p>Real budgeting tips from students.</p>
           <span class="card-arrow">→</span>
         </div>
+        <div class="card clickable" data-goto="schedule">
+          <div class="card-icon"><i class="fa-solid fa-calendar"></i></div>
+          <h3>Schedule</h3>
+          <p>What the schedule looks like (vaguely) and opportunity for you to plan if you can squeeze a job.</p>
+          <span class="card-arrow">→</span>
+        </div>
         <div class="card clickable" data-goto="faq">
           <div class="card-icon"><i class="fa-solid fa-circle-question"></i></div>
           <h3>FAQ</h3>
-          <p>Student Portals, Enrollment and Semester Information and Documents, 
-            Bureaucracy, and anything under the sun answered honestly by people who've been through it.</p>
+          <p>Enrollment, Semester Information and Documents, 
+            Bureaucracy, and anything under the sun.</p>
+          <span class="card-arrow">→</span>
+        </div>
+        <div class="card clickable" data-goto="glossary">
+          <div class="card-icon"><i class="fa-solid fa-book-bookmark"></i></div>
+          <h3>Glossary</h3>
+          <p>German academic, bureaucracy, and student life terms explained in plain English.</p>
+          <span class="card-arrow">→</span>
+        </div>
+        <div class="card clickable" data-goto="links">
+          <div class="card-icon"><i class="fa-solid fa-link"></i></div>
+          <h3>Useful Links</h3>
+          <p>Official portals, housing, visa offices, apps, and everything you'll need day-to-day.</p>
           <span class="card-arrow">→</span>
         </div>
         <div class="card clickable" data-goto="contribute">
@@ -702,7 +732,7 @@
       <div class="page-header">
         <div class="breadcrumb">Wiki / <span>Student Portals</span></div>
         <h1>Student Portals</h1>
-        <p class="page-intro">All the platforms you'll need as an IGC student — in one place.</p>
+        <p class="page-intro">All the platforms you'll need as an IGC student in one place.</p>
       </div>
 
       <div class="portals-list">
@@ -733,9 +763,9 @@
             Payments (Semester Fees), Requested Reports (Immatrikulation Document, Transcript of Records Document)</li>
             <li><b>PLANNER OF STUDIES:</b> Module Registration (be on lookout as this will enroll you into the system so you can take your exams 
               and have your grades reflected into the system).</li>
-            <li><b>SHOW MY ENROLLMENTS:</b>Shows the data of the course/modules you're enrolled to.</li>
-            <li><b>MY ACHIEVEMENTS:</b>Reflects your current running grades.</li>
-            <li><b>RZSHB SERVICE:</b>Admin Matters contact if you need help regarding portals or access matters.</li>
+            <li><b>SHOW MY ENROLLMENTS:</b> Shows the data of the course/modules you're enrolled to.</li>
+            <li><b>MY ACHIEVEMENTS:</b> Reflects your current running grades.</li>
+            <li><b>RZSHB SERVICE:</b> Admin Matters contact if you need help regarding portals or access matters.</li>
           </ul>
         </div>
 
@@ -883,8 +913,15 @@
         </div>
 
         <div class="info-block">
+          <h3>(Home Country) Paid Intensive Courses</h3>
+          <ul class="wiki-list">
+            <li>Also consider contacting your home country language schools as some may have German-Timezone classes with schedule you are more comfortable with. </li>
+          </ul>
+        </div>
+
+        <div class="info-block">
           <h3>Tandem &amp; Exchange / Language Cafes</h3>
-          <p>Many universities run a <strong>Tandem program</strong> — you teach your native language to a German speaker, they teach you German. Completely free and often the fastest way to get conversational.</p>
+          <p>Many universities run a <strong>Tandem program</strong> where you teach your native language to a German speaker, they teach you German. Completely free and often the fastest way to get conversational.</p>
           <ul class="wiki-list">
             <li>Check the International Office or language center for sign-ups</li>
             <li>Apps: Tandem, etc.</li>
@@ -899,6 +936,243 @@
         </div>
 
       </div>
+    </section>
+
+    <!-- SCHEDULE PAGE -->
+    <section class="page" id="page-schedule">
+      <div class="page-header">
+        <div class="breadcrumb">Wiki / <span>Schedule</span></div>
+        <h1>Typical Semester Schedule</h1>
+        <p class="page-intro">A representative week and month based on past MDT class schedules. Use this to plan part-time work, language courses, and personal commitments.</p>
+      </div>
+
+      <div class="notice">
+        <span class="notice-tag">Note</span>
+        <p>This is based on past semester data, not an official timetable. Actual schedules vary per semester and professor. Always verify through AULIS and CampIno.</p>
+      </div>
+
+      <!-- VIEW TOGGLE -->
+      <div class="schedule-toggle">
+        <button class="sched-btn active" id="weeklyBtn">Weekly View</button>
+        <button class="sched-btn" id="monthlyBtn">Monthly View</button>
+      </div>
+
+      <!-- WEEKLY VIEW -->
+      <div class="schedule-view" id="weeklyView">
+        <div class="week-legend">
+          <span class="legend-item"><span class="legend-dot class"></span> Class</span>
+          <span class="legend-item"><span class="legend-dot job"></span> Part-time window</span>
+          <span class="legend-item"><span class="legend-dot free"></span> Free</span>
+        </div>
+
+        <div class="week-grid">
+          <div class="week-header">
+            <div class="time-col"></div>
+            <div class="day-col">Mon</div>
+            <div class="day-col">Tue</div>
+            <div class="day-col">Wed</div>
+            <div class="day-col">Thu</div>
+            <div class="day-col">Fri</div>
+          </div>
+
+          <!-- 08:00 -->
+          <div class="week-row">
+            <div class="time-col">08:00</div>
+            <div class="week-cell free"></div>
+            <div class="week-cell free"></div>
+            <div class="week-cell free"></div>
+            <div class="week-cell free"></div>
+            <div class="week-cell free"></div>
+          </div>
+
+          <!-- 09:00 -->
+          <div class="week-row">
+            <div class="time-col">09:00</div>
+            <div class="week-cell class" title="Business Models & Innovation">BMI</div>
+            <div class="week-cell free"></div>
+            <div class="week-cell class" title="Strategic Management">StratMgmt</div>
+            <div class="week-cell free"></div>
+            <div class="week-cell free"></div>
+          </div>
+
+          <!-- 10:00 -->
+          <div class="week-row">
+            <div class="time-col">10:00</div>
+            <div class="week-cell class" title="Business Models & Innovation">BMI</div>
+            <div class="week-cell free"></div>
+            <div class="week-cell class" title="Strategic Management">StratMgmt</div>
+            <div class="week-cell free"></div>
+            <div class="week-cell free"></div>
+          </div>
+
+          <!-- 11:00 -->
+          <div class="week-row">
+            <div class="time-col">11:00</div>
+            <div class="week-cell free"></div>
+            <div class="week-cell class" title="Organizational Behavior">OrgBeh</div>
+            <div class="week-cell free"></div>
+            <div class="week-cell class" title="Data-Driven Decision Making">DDDM</div>
+            <div class="week-cell free"></div>
+          </div>
+
+          <!-- 12:00 -->
+          <div class="week-row">
+            <div class="time-col">12:00</div>
+            <div class="week-cell free"></div>
+            <div class="week-cell class" title="Organizational Behavior">OrgBeh</div>
+            <div class="week-cell free"></div>
+            <div class="week-cell class" title="Data-Driven Decision Making">DDDM</div>
+            <div class="week-cell free"></div>
+          </div>
+
+          <!-- 13:00 lunch -->
+          <div class="week-row lunch">
+            <div class="time-col">13:00</div>
+            <div class="week-cell free" colspan="5"><span class="lunch-label">— Lunch Break —</span></div>
+            <div class="week-cell free"></div>
+            <div class="week-cell free"></div>
+            <div class="week-cell free"></div>
+            <div class="week-cell free"></div>
+          </div>
+
+          <!-- 14:00 -->
+          <div class="week-row">
+            <div class="time-col">14:00</div>
+            <div class="week-cell job" title="Good window for part-time work"></div>
+            <div class="week-cell class" title="Innovation Management">InnoMgmt</div>
+            <div class="week-cell job" title="Good window for part-time work"></div>
+            <div class="week-cell free"></div>
+            <div class="week-cell class" title="AI for Managers">AI Mgmt</div>
+          </div>
+
+          <!-- 15:00 -->
+          <div class="week-row">
+            <div class="time-col">15:00</div>
+            <div class="week-cell job" title="Good window for part-time work"></div>
+            <div class="week-cell class" title="Innovation Management">InnoMgmt</div>
+            <div class="week-cell job" title="Good window for part-time work"></div>
+            <div class="week-cell free"></div>
+            <div class="week-cell class" title="AI for Managers">AI Mgmt</div>
+          </div>
+
+          <!-- 16:00 -->
+          <div class="week-row">
+            <div class="time-col">16:00</div>
+            <div class="week-cell job" title="Good window for part-time work"></div>
+            <div class="week-cell job" title="Good window for part-time work"></div>
+            <div class="week-cell job" title="Good window for part-time work"></div>
+            <div class="week-cell job" title="Good window for part-time work"></div>
+            <div class="week-cell job" title="Good window for part-time work"></div>
+          </div>
+
+          <!-- 17:00 -->
+          <div class="week-row">
+            <div class="time-col">17:00</div>
+            <div class="week-cell job"></div>
+            <div class="week-cell job"></div>
+            <div class="week-cell job"></div>
+            <div class="week-cell job"></div>
+            <div class="week-cell job"></div>
+          </div>
+
+          <!-- 18:00 -->
+          <div class="week-row">
+            <div class="time-col">18:00</div>
+            <div class="week-cell job"></div>
+            <div class="week-cell job"></div>
+            <div class="week-cell job"></div>
+            <div class="week-cell job"></div>
+            <div class="week-cell job"></div>
+          </div>
+        </div>
+
+        <div class="schedule-insight">
+          <h4>Part-time work analysis</h4>
+          <p>Based on this typical week, the best windows for part-time or Werkstudent work are <strong>Monday, Wednesday afternoons</strong> and <strong>Thursday all day</strong>. Friday afternoons are also consistently free. Most students working part-time target <strong>16–20 hours/week</strong> spread across these slots.</p>
+        </div>
+      </div>
+
+      <!-- MONTHLY VIEW -->
+      <div class="schedule-view hidden" id="monthlyView">
+        <div class="week-legend">
+          <span class="legend-item"><span class="legend-dot class"></span> Heavy class days</span>
+          <span class="legend-item"><span class="legend-dot job"></span> Good work days</span>
+          <span class="legend-item"><span class="legend-dot free"></span> Light / free</span>
+        </div>
+
+        <div class="month-grid">
+          <div class="month-header-row">
+            <div class="month-day-label">Mon</div>
+            <div class="month-day-label">Tue</div>
+            <div class="month-day-label">Wed</div>
+            <div class="month-day-label">Thu</div>
+            <div class="month-day-label">Fri</div>
+            <div class="month-day-label weekend">Sat</div>
+            <div class="month-day-label weekend">Sun</div>
+          </div>
+
+          <!-- Week 1 -->
+          <div class="month-row">
+            <div class="month-cell class"><span class="day-num">1</span><span class="day-tag">BMI · StratMgmt</span></div>
+            <div class="month-cell class"><span class="day-num">2</span><span class="day-tag">OrgBeh · InnoMgmt</span></div>
+            <div class="month-cell class"><span class="day-num">3</span><span class="day-tag">StratMgmt · DDDM</span></div>
+            <div class="month-cell job"><span class="day-num">4</span><span class="day-tag">✓ Work day</span></div>
+            <div class="month-cell class"><span class="day-num">5</span><span class="day-tag">AI Mgmt</span></div>
+            <div class="month-cell weekend"><span class="day-num">6</span></div>
+            <div class="month-cell weekend"><span class="day-num">7</span></div>
+          </div>
+
+          <!-- Week 2 -->
+          <div class="month-row">
+            <div class="month-cell class"><span class="day-num">8</span><span class="day-tag">BMI · StratMgmt</span></div>
+            <div class="month-cell class"><span class="day-num">9</span><span class="day-tag">OrgBeh · InnoMgmt</span></div>
+            <div class="month-cell class"><span class="day-num">10</span><span class="day-tag">StratMgmt · DDDM</span></div>
+            <div class="month-cell job"><span class="day-num">11</span><span class="day-tag">✓ Work day</span></div>
+            <div class="month-cell class"><span class="day-num">12</span><span class="day-tag">AI Mgmt</span></div>
+            <div class="month-cell weekend"><span class="day-num">13</span></div>
+            <div class="month-cell weekend"><span class="day-num">14</span></div>
+          </div>
+
+          <!-- Week 3 -->
+          <div class="month-row">
+            <div class="month-cell class"><span class="day-num">15</span><span class="day-tag">BMI · StratMgmt</span></div>
+            <div class="month-cell class"><span class="day-num">16</span><span class="day-tag">OrgBeh · InnoMgmt</span></div>
+            <div class="month-cell free"><span class="day-num">17</span><span class="day-tag">Self-study</span></div>
+            <div class="month-cell job"><span class="day-num">18</span><span class="day-tag">✓ Work day</span></div>
+            <div class="month-cell class"><span class="day-num">19</span><span class="day-tag">AI Mgmt</span></div>
+            <div class="month-cell weekend"><span class="day-num">20</span></div>
+            <div class="month-cell weekend"><span class="day-num">21</span></div>
+          </div>
+
+          <!-- Week 4 -->
+          <div class="month-row">
+            <div class="month-cell class"><span class="day-num">22</span><span class="day-tag">BMI · StratMgmt</span></div>
+            <div class="month-cell class"><span class="day-num">23</span><span class="day-tag">OrgBeh · InnoMgmt</span></div>
+            <div class="month-cell class"><span class="day-num">24</span><span class="day-tag">StratMgmt · DDDM</span></div>
+            <div class="month-cell job"><span class="day-num">25</span><span class="day-tag">✓ Work day</span></div>
+            <div class="month-cell free"><span class="day-num">26</span><span class="day-tag">Light day</span></div>
+            <div class="month-cell weekend"><span class="day-num">27</span></div>
+            <div class="month-cell weekend"><span class="day-num">28</span></div>
+          </div>
+
+          <!-- Week 5 -->
+          <div class="month-row">
+            <div class="month-cell free"><span class="day-num">29</span><span class="day-tag">Self-study</span></div>
+            <div class="month-cell job"><span class="day-num">30</span><span class="day-tag">✓ Work day</span></div>
+            <div class="month-cell empty"></div>
+            <div class="month-cell empty"></div>
+            <div class="month-cell empty"></div>
+            <div class="month-cell empty"></div>
+            <div class="month-cell empty"></div>
+          </div>
+        </div>
+
+        <div class="schedule-insight">
+          <h4>Monthly pattern</h4>
+          <p>Thursdays are consistently the best full work day, no classes scheduled. Weekends are fully free for work, rest, or language courses. Mid-semester (around week 3) tends to lighten up slightly before assignment deadlines hit in week 4.</p>
+        </div>
+      </div>
+
     </section>
 
     <!-- BUDGET PAGE -->
@@ -992,6 +1266,7 @@
         <div class="info-block">
           <h3>Funding &amp; Scholarships</h3>
           <ul class="wiki-list">
+            <li><strong>IGC DOES NOT OFFER SCHOLARSHIPS</strong>: Already i nthe website, it does not provide financial assistance.</li>
             <li><strong>Deutschlandstipendium</strong>: €300/month, apply through your university</li>
           </ul>
         </div>
@@ -1066,8 +1341,8 @@
           <summary>Can I work while studying?</summary>
           <div class="faq-body">
             <ul class="wiki-list">
-            <li>EU students: yes, freely. </li>
-            <li>Non-EU students on a student visa: up to 120 full days or 240 half-days per year.</li>
+            <li><b>EU students:</b> yes, freely. </li>
+            <li><b>Non-EU students on a student visa:</b> up to 120 full days or 240 half-days per year.</li>
             <li>Working student (Werkstudent) contracts are the standard structure, they're tax-efficient and legal.</li>
             <li>Check with the Ausländerbehörde if unsure about your visa conditions.</li>
             </ul>
@@ -1121,6 +1396,431 @@
       </div>
     </section>
 
+    <!-- GLOSSARY PAGE -->
+    <section class="page" id="page-glossary">
+      <div class="page-header">
+        <div class="breadcrumb">Wiki / <span>Glossary</span></div>
+        <h1>Glossary</h1>
+        <p class="page-intro">Every confusing term you'll encounter, academic, bureaucratic, and everyday. Sorted alphabetically within each category.</p>
+      </div>
+
+      <div class="glossary-search-wrap">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="glossarySearch" placeholder="Search terms..." />
+      </div>
+
+      <div class="glossary-body" id="glossaryBody">
+
+        <div class="glossary-section">
+          <h3 class="glossary-cat">Academic Terms</h3>
+          <div class="glossary-list">
+            <div class="glossary-item">
+              <span class="gterm">ECTS</span>
+              <span class="gdef">European Credit Transfer System. A unit measuring study workload. One ECTS ≈ 25–30 hours of work. Most modules are worth 5–6 ECTS.</span>
+            </div>
+            <div class="glossary-item">
+              <span class="gterm">SWS</span>
+              <span class="gdef">Semesterwochenstunden: Semester hours per week. Measures contact hours in class, not total workload.</span>
+            </div>
+            <div class="glossary-item">
+              <span class="gterm">Prüfungsordnung (PO)</span>
+              <span class="gdef">Examination regulations. The legal document governing how exams, retakes, and grading work in your program. Always the source of truth.</span>
+            </div>
+            <div class="glossary-item">
+              <span class="gterm">Prüfungsanmeldung</span>
+              <span class="gdef">Exam registration. You must register for exams within a deadline, missing it usually means you cannot sit the exam.</span>
+            </div>
+            <div class="glossary-item">
+              <span class="gterm">Klausur</span>
+              <span class="gdef">Written exam. Usually closed or open book. Check your module's Prüfungsordnung.</span>
+            </div>
+            <div class="glossary-item">
+              <span class="gterm">Hausarbeit</span>
+              <span class="gdef">Academic paper / essay submitted as coursework. Usually 10–20 pages depending on the module.</span>
+            </div>
+            <div class="glossary-item">
+              <span class="gterm">Referat</span>
+              <span class="gdef">Presentation or seminar paper. Often paired with a written component.</span>
+            </div>
+            <div class="glossary-item">
+              <span class="gterm">Notenscale</span>
+              <span class="gdef">German grading scale: 1.0 (best) → 4.0 (pass) → 5.0 (fail). A 2.0–2.5 is considered good. A 1.x is excellent.</span>
+            </div>
+            <div class="glossary-item">
+              <span class="gterm">Semesterferien</span>
+              <span class="gdef">Semester break. Does not mean no work, exams and thesis writing often happen during this period.</span>
+            </div>
+            <div class="glossary-item">
+              <span class="gterm">Vorlesung</span>
+              <span class="gdef">Lecture. Typically one-way delivery from professor to students.</span>
+            </div>
+            <div class="glossary-item">
+              <span class="gterm">Seminar</span>
+              <span class="gdef">Interactive class with discussion, presentations, and participation expected.</span>
+            </div>
+            <div class="glossary-item">
+              <span class="gterm">Übung</span>
+              <span class="gdef">Exercise / tutorial session. Practical application of lecture content.</span>
+            </div>
+            <div class="glossary-item">
+              <span class="gterm">Thesis / Abschlussarbeit</span>
+              <span class="gdef">Master's thesis. Final research project to complete the degree. Usually 60–90 pages.</span>
+            </div>
+            <div class="glossary-item">
+              <span class="gterm">Betreuung</span>
+              <span class="gdef">Supervision. Your thesis supervisor relationship. Choose carefully.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="glossary-section">
+          <h3 class="glossary-cat">Bureaucracy Terms</h3>
+          <div class="glossary-list">
+            <div class="glossary-item">
+              <span class="gterm">Anmeldung</span>
+              <span class="gdef">City address registration at the Einwohnermeldeamt. Must be done within 14 days of moving in. Required for almost everything else.</span>
+            </div>
+            <div class="glossary-item">
+              <span class="gterm">Abmeldung</span>
+              <span class="gdef">De-registration from the city. Required when you leave Germany permanently.</span>
+            </div>
+            <div class="glossary-item">
+              <span class="gterm">Einwohnermeldeamt</span>
+              <span class="gdef">Local residents' registration office. Where you do your Anmeldung. Book an appointment online in advance.</span>
+            </div>
+            <div class="glossary-item">
+              <span class="gterm">Ausländerbehörde</span>
+              <span class="gdef">Immigration authority. Non-EU students deal with this office for visa extensions and residence permits.</span>
+            </div>
+            <div class="glossary-item">
+              <span class="gterm">Aufenthaltstitel</span>
+              <span class="gdef">Residence permit. The physical card non-EU students receive after approval.</span>
+            </div>
+            <div class="glossary-item">
+              <span class="gterm">Steueridentifikationsnummer (Steuer-ID)</span>
+              <span class="gdef">Tax identification number. Sent by post after Anmeldung. Required for employment and tax returns.</span>
+            </div>
+            <div class="glossary-item">
+              <span class="gterm">Krankenversicherung</span>
+              <span class="gdef">Health insurance. Mandatory in Germany. Students under 30 can use public insurance (TK, AOK, Barmer) at reduced rates (~€120–130/month).</span>
+            </div>
+            <div class="glossary-item">
+              <span class="gterm">Wohnungsgeberbestätigung</span>
+              <span class="gdef">Landlord confirmation form. Required for Anmeldung, your landlord must sign this confirming you live at the address.</span>
+            </div>
+            <div class="glossary-item">
+              <span class="gterm">Rundfunkbeitrag (GEZ)</span>
+              <span class="gdef">Broadcasting fee (~€18.36/month per household). Applies to most households. Students sharing a flat pay once per flat, not per person.</span>
+            </div>
+            <div class="glossary-item">
+              <span class="gterm">SCHUFA</span>
+              <span class="gdef">German credit scoring system. Landlords often request a SCHUFA report. 
+                New arrivals won't have one, this can be a barrier to renting.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="glossary-section">
+          <h3 class="glossary-cat">University Abbreviations</h3>
+          <div class="glossary-list">
+            <div class="glossary-item">
+              <span class="gterm">HSB</span>
+              <span class="gdef">Hochschule Bremen (Bremen University of Applied Sciences). The institution hosting the IGC.</span>
+            </div>
+            <div class="glossary-item">
+              <span class="gterm">IGC</span>
+              <span class="gdef">International Graduate Center. The graduate school within HSB running the MDT and other international master's programs.</span>
+            </div>
+            <div class="glossary-item">
+              <span class="gterm">MDT</span>
+              <span class="gdef">Management - Digitalization and Transformation. Your program.</span>
+            </div>
+            <div class="glossary-item">
+              <span class="gterm">AULIS</span>
+              <span class="gdef">HSB's learning management system (based on ILIAS). Where professors post materials, assignments, and announcements.</span>
+            </div>
+            <div class="glossary-item">
+              <span class="gterm">CampIno</span>
+              <span class="gdef">HSB's student administration portal. Grades, enrollment, certificates, and semester documents.</span>
+            </div>
+            <div class="glossary-item">
+              <span class="gterm">SZHB</span>
+              <span class="gdef">Sprachenzentrum Bremen (Language Center). Offers free or subsidized language courses for enrolled students.</span>
+            </div>
+            <div class="glossary-item">
+              <span class="gterm">ISA</span>
+              <span class="gdef">International Student Advisory. The office supporting international students with visa, enrollment, and general questions.</span>
+            </div>
+            <div class="glossary-item">
+              <span class="gterm">Studierendenwerk</span>
+              <span class="gdef">Student services organization. Manages student dorms, Mensa, and social counseling. Apply for dorm housing early.</span>
+            </div>
+            <div class="glossary-item">
+              <span class="gterm">AStA</span>
+              <span class="gdef">Allgemeiner Studierendenausschuss: student union. Represents students, organizes events, and manages the semester ticket.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="glossary-section">
+          <h3 class="glossary-cat">Student Life Terms</h3>
+          <div class="glossary-list">
+            <div class="glossary-item">
+              <span class="gterm">WG (Wohngemeinschaft)</span>
+              <span class="gdef">Shared flat. The most common housing arrangement for students. Cheaper than a private studio and more social.</span>
+            </div>
+            <div class="glossary-item">
+              <span class="gterm">Mensa</span>
+              <span class="gdef">University canteen. Subsidized hot meals for students, usually €2–4 per meal with student ID.</span>
+            </div>
+            <div class="glossary-item">
+              <span class="gterm">Semesterticket</span>
+              <span class="gdef">Public transport pass valid for the semester. Usually included in the semester fee or available at a heavy discount.</span>
+            </div>
+            <div class="glossary-item">
+              <span class="gterm">Deutschlandticket</span>
+              <span class="gdef">€29–49/month nationwide public transport pass. Students often get it at a subsidized rate through their university.</span>
+            </div>
+            <div class="glossary-item">
+              <span class="gterm">Werkstudent</span>
+              <span class="gdef">Working student contract. Up to 20h/week during semester, tax-advantaged. The standard way to work part-time in Germany as a student.</span>
+            </div>
+            <div class="glossary-item">
+              <span class="gterm">HiWi (Hilfswissenschaftler)</span>
+              <span class="gdef">Student research/teaching assistant position at the university. Flexible hours, good pay (~€13–15/hr), good for CV.</span>
+            </div>
+            <div class="glossary-item">
+              <span class="gterm">Minijob</span>
+              <span class="gdef">Part-time job earning up to €538/month, tax-free. Less paperwork than Werkstudent but limited earnings.</span>
+            </div>
+            <div class="glossary-item">
+              <span class="gterm">BAföG</span>
+              <span class="gdef">German student financial aid. Generally not available to non-EU international students, but worth checking.</span>
+            </div>
+            <div class="glossary-item">
+              <span class="gterm">Immatrikulationsbescheinigung</span>
+              <span class="gdef">Enrollment certificate. Proof that you are a registered student. Required for health insurance, bank accounts, and discounts.</span>
+            </div>
+            <div class="glossary-item">
+              <span class="gterm">Exmatrikulation</span>
+              <span class="gdef">De-enrollment from the university. Happens automatically after graduation or if you withdraw.</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- USEFUL LINKS PAGE -->
+    <section class="page" id="page-links">
+      <div class="page-header">
+        <div class="breadcrumb">Wiki / <span>Useful Links</span></div>
+        <h1>Useful Links</h1>
+        <p class="page-intro">Everything you'll need (official portals, housing, apps, and daily life in Germany).</p>
+      </div>
+
+      <div class="links-body">
+
+        <div class="links-section">
+          <h3><i class="fa-solid fa-university"></i> Official HSB / IGC</h3>
+          <div class="links-list">
+            <a href="https://www.hs-bremen.de" target="_blank" class="link-item">
+              <span class="link-name">HSB Website</span>
+              <span class="link-desc">Main university website: news, departments, contacts</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+            <a href="https://www.graduatecenter.org" target="_blank" class="link-item">
+              <span class="link-name">IGC Website</span>
+              <span class="link-desc">International Graduate Center: Program info and events, everything about IGC.</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+            <a href="https://campino.hs-bremen.de" target="_blank" class="link-item">
+              <span class="link-name">CampIno</span>
+              <span class="link-desc">Grades, enrollment, semester documents</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+            <a href="https://aulis.hs-bremen.de" target="_blank" class="link-item">
+              <span class="link-name">AULIS</span>
+              <span class="link-desc">Course materials, assignments, announcements</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+            <a href="https://webmail.hs-bremen.de" target="_blank" class="link-item">
+              <span class="link-name">HSB Webmail</span>
+              <span class="link-desc">Your official university inbox</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+            <a href="https://book.calenso.com/internationalgraduatecenter" target="_blank" class="link-item">
+              <span class="link-name">ISA Appointments</span>
+              <span class="link-desc">Book advisory appointments with the International Student office</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="links-section">
+          <h3><i class="fa-solid fa-building-columns"></i> Student Services & Offices</h3>
+          <div class="links-list">
+            <a href="https://www.studierendenwerk-bremen.de" target="_blank" class="link-item">
+              <span class="link-name">Studierendenwerk Bremen</span>
+              <span class="link-desc">Student dorms, Mensa, social counseling</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+            <a href="https://www.asta.uni-bremen.de/" target="_blank" class="link-item">
+              <span class="link-name">AStA Bremen</span>
+              <span class="link-desc">Student union: Semester ticket, events, legal advice</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="links-section">
+          <h3><i class="fa-solid fa-house"></i> Housing</h3>
+          <div class="links-list">
+            <a href="https://www.wg-gesucht.de" target="_blank" class="link-item">
+              <span class="link-name">WG-Gesucht</span>
+              <span class="link-desc">Most popular platform for shared flats in Germany</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+            <a href="https://www.immobilienscout24.de/" target="_blank" class="link-item">
+              <span class="link-name">ImmoScout24</span>
+              <span class="link-desc">Apartments and private rooms (broader listings)</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+            <a href="https://www.studierendenwerk-bremen.de/wohnen" target="_blank" class="link-item">
+              <span class="link-name">Studierendenwerk Dorms</span>
+              <span class="link-desc">Cheapest option. Apply as early as possible</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="links-section">
+          <h3><i class="fa-solid fa-passport"></i> Government & Visa</h3>
+          <div class="links-list">
+            <a href="https://www.service.bremen.de/die-senatorin-fuer-inneres-und-sport/migrationsamt-100086" target="_blank" class="link-item">
+              <span class="link-name">Ausländerbehörde Bremen</span>
+              <span class="link-desc">Immigration authority. Residence permits for non-EU students.</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+            <a href="https://www.uni-bremen.de/bsu" target="_blank" class="link-item">
+              <span class="link-name">BSU (Bremen Service Universität)</span>
+              <span class="link-desc">Immigration authority branch for University Students (you will be making your appointment here)</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+            <a href="https://www.service.bremen.de/dienstleistungen/wohnsitz-bei-zuzug-aus-dem-ausland-anmelden-123039?lang=en" target="_blank" class="link-item">
+              <span class="link-name">Einwohnermeldeamt Bremen</span>
+              <span class="link-desc">City registration (Anmeldung). Book an appointment here (same portal as Migration Office)</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+            <a href="https://www.make-it-in-germany.com" target="_blank" class="link-item">
+              <span class="link-name">Make it in Germany</span>
+              <span class="link-desc">Official German government guide for international students and workers</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+            <a href="https://www.daad.de/en/" target="_blank" class="link-item">
+              <span class="link-name">DAAD</span>
+              <span class="link-desc">Scholarships, funding, and resources for international students</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="links-section">
+          <h3><i class="fa-solid fa-heart-pulse"></i> Health Insurance</h3>
+          <div class="links-list">
+            <a href="https://www.tk.de/en" target="_blank" class="link-item">
+              <span class="link-name">TK (Techniker Krankenkasse)</span>
+              <span class="link-desc">Most popular public health insurer among international students</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+            <a href="https://www.tk-aerztefuehrer.de/TK/englische-suche.htm" target="_blank" class="link-item">
+              <span class="link-name">TK Doctor Finder</span>
+              <span class="link-desc">TK's dedicated page for you to find available doctors (under your insurance) within your area.</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+            <a href="https://www.tk.de/techniker/gesundheit-foerdern/digitale-gesundheit/gesundheits-apps/tk-doc-app-2212686" target="_blank" class="link-item">
+              <span class="link-name">TK-Doc</span>
+              <span class="link-desc">TK's online doctor consultation app. Good for minor issues</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+            <a href="https://www.doctolib.de" target="_blank" class="link-item">
+              <span class="link-name">Doctolib</span>
+              <span class="link-desc">Book doctor appointments online. find English-speaking doctors</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="links-section">
+          <h3><i class="fa-solid fa-language"></i> German Language</h3>
+          <div class="links-list">
+            <a href="https://www.dw.com/en/learn-german/s-2469" target="_blank" class="link-item">
+              <span class="link-name">Deutsche Welle - Learn German</span>
+              <span class="link-desc">Free structured German courses A1–B1, excellent quality</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+            <a href="https://www.goethe.de/en/index.html" target="_blank" class="link-item">
+              <span class="link-name">Goethe Institut</span>
+              <span class="link-desc">Gold standard German courses. Paid but internationally recognized</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+            <a href="https://campusgerman.com/" target="_blank" class="link-item">
+              <span class="link-name">Campus German</span>
+              <span class="link-desc">Another language learning service/course with free langauge cafes hosted regularly.</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="links-section">
+          <h3><i class="fa-solid fa-mobile-screen"></i> Useful Apps & Daily Life</h3>
+          <div class="links-list">
+            <a href="https://www.aldi.de" target="_blank" class="link-item">
+              <span class="link-name">ALDI / LIDL</span>
+              <span class="link-desc">Cheapest supermarkets. Weekly deals on electronics, clothing, food</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+            <a href="https://www.rewe.de" target="_blank" class="link-item">
+              <span class="link-name">REWE</span>
+              <span class="link-desc">Supermarket with online delivery and good range of international products</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+            <a href="https://www.dm.de" target="_blank" class="link-item">
+              <span class="link-name">DM</span>
+              <span class="link-desc">Drugstore: toiletries, medicine, household items, very affordable</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+            <a href="https://www.lieferando.de" target="_blank" class="link-item">
+              <span class="link-name">Lieferando</span>
+              <span class="link-desc">Food delivery app: Germany's main platform.</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+            <a href="https://www.kleinanzeigen.de" target="_blank" class="link-item">
+              <span class="link-name">Kleinanzeigen</span>
+              <span class="link-desc">Buy/sell second-hand furniture, bikes, textbooks, electronics</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+            <a href="https://www.vinted.de" target="_blank" class="link-item">
+              <span class="link-name">Vinted</span>
+              <span class="link-desc">Second-hand clothing (and items too): great for affordable stuff</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+            <a href="https://www.bahn.de" target="_blank" class="link-item">
+              <span class="link-name">Deutsche Bahn (DB)</span>
+              <span class="link-desc">Train tickets. Book early for Sparpreis deals. App: DB Navigator</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+            <a href="https://www.vbn.de/fahrplaner" target="_blank" class="link-item">
+              <span class="link-name">Fahrplanner</span>
+              <span class="link-desc">For public transportation routes and scheduling. Also has an app under the same name.</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
     <!-- CONTRIBUTE PAGE -->
     <section class="page" id="page-contribute">
       <div class="page-header">
@@ -1130,7 +1830,7 @@
           This wiki is only as good as what students put into it. 
           Everything exeternally contributed will be verified and checked for accuracy and ground rule compliance 
           before being added to the main content. </p>
-        <p>
+        <p class="page-intro">
           Here's how to add, correct, or update content.</p>
       </div>
 
@@ -1140,6 +1840,17 @@
           <h3>How this wiki works</h3>
           <p>This is a static HTML site hosted on GitHub. 
             To contribute, you'll need a GitHub account.</p>
+        </div>
+
+        <div class="info-block">
+          <h3>Ground rules</h3>
+          <ul class="wiki-list">
+            <li><strong>RESPECT PRIVACY: INITIALS ONLY.</strong> Full names are strictly forbidden. Always follow the initials only rule.</li>
+            <li><strong>FACTUAL EXPERIENCES: KEEP IT PROFESSIONAL.</strong> Keep the experience related to the lecture, teaching style, or module content. Don't add anything that can be used to harm an individual's dignity.</li>
+            <li><strong>DATE YOUR CONTRIBUTIONS.</strong> To make reviews reliable and consistent, contributions should be timestamped. Contributions without a timestamp will be denied.</li>
+            <li><strong>CONSTRUCTIVE FEEDBACK ONLY.</strong> Not happy with a professor's teaching style? Found a module lacking? Your review must remain constructive. This is not for the university, it's for new students who want a better understanding of what they're enrolling in. Your feedback helps them raise better questions and expectations. (And don't forget, we always fill out an official evaluation form for our professors.)</li>
+            <li><strong>BE POLITE AND DON'T BE MEAN.</strong> No slurs, aggressive remarks, backhanded comments, or anything of the sort.</li>
+          </ul>
         </div>
 
         <div class="info-block">
@@ -1163,21 +1874,11 @@
           <h3>What to contribute</h3>
           <ul class="wiki-list">
             <li>Module notes: workload, tips, exam format</li>
-            <li>Professor profiles: teaching style, how to communicate</li>
+            <li>Professor profiles: teaching style, how to communicate - please confirm the initials! 
+              Some professors may have the same initials so they either get a new code name or whatever.</li>
             <li>FAQ answers: questions you had that weren't answered anywhere</li>
             <li>Budget corrections: costs change, help keep numbers accurate</li>
             <li>Language course reviews: which ones actually worked?</li>
-          </ul>
-        </div>
-
-        <div class="info-block">
-          <h3>Ground rules</h3>
-          <ul class="wiki-list">
-            <li><strong>RESPECT PRIVACY: INITIALS ONLY.</strong> Full names are strictly forbidden. Always follow the initials only rule.</li>
-            <li><strong>FACTUAL EXPERIENCES: KEEP IT PROFESSIONAL.</strong> Keep the experience related to the lecture, teaching style, or module content. Don't add anything that can be used to harm an individual's dignity.</li>
-            <li><strong>DATE YOUR CONTRIBUTIONS.</strong> To make reviews reliable and consistent, contributions should be timestamped. Contributions without a timestamp will be denied.</li>
-            <li><strong>CONSTRUCTIVE FEEDBACK ONLY.</strong> Not happy with a professor's teaching style? Found a module lacking? Your review must remain constructive. This is not for the university — it's for new students who want a better understanding of what they're enrolling in. Your feedback helps them raise better questions and expectations. (And don't forget, we always fill out an official evaluation form for our professors.)</li>
-            <li><strong>BE POLITE AND DON'T BE MEAN.</strong> No slurs, aggressive remarks, backhanded comments, or anything of the sort.</li>
           </ul>
         </div>
 

@@ -1278,6 +1278,246 @@ code {
 }
 
 /* ============================================
+   SCHEDULE
+   ============================================ */
+
+.schedule-toggle {
+  display: flex;
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  margin: 1.5rem 0 1rem;
+  width: fit-content;
+}
+
+.sched-btn {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.5rem 1.25rem;
+  background: var(--bg);
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.sched-btn.active {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+.schedule-view.hidden {
+  display: none;
+}
+
+/* ── Legend ── */
+.week-legend {
+  display: flex;
+  gap: 1.25rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  letter-spacing: 0.03em;
+}
+
+.legend-dot {
+  width: 10px;
+  height: 10px;
+  flex-shrink: 0;
+}
+
+.legend-dot.class { background: var(--accent); }
+.legend-dot.job   { background: #4a6741; }
+.legend-dot.free  { background: var(--bg-4); border: 1px solid var(--border); }
+
+/* ── Weekly grid ── */
+.week-grid {
+  border: 1px solid var(--border);
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+}
+
+.week-header,
+.week-row {
+  display: grid;
+  grid-template-columns: 60px repeat(5, 1fr);
+  border-bottom: 1px solid var(--border);
+}
+
+.week-header {
+  background: var(--bg-3);
+}
+
+.week-header .day-col,
+.week-header .time-col {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  padding: 0.5rem 0.4rem;
+  text-align: center;
+  border-right: 1px solid var(--border);
+}
+
+.time-col {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  color: var(--text-dim);
+  padding: 0.5rem 0.4rem;
+  text-align: right;
+  border-right: 1px solid var(--border);
+  background: var(--bg-2);
+  white-space: nowrap;
+}
+
+.week-cell {
+  padding: 0.4rem;
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-align: center;
+  border-right: 1px solid var(--border);
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.15s;
+  cursor: default;
+}
+
+.week-cell.class {
+  background: rgba(200, 184, 154, 0.12);
+  color: var(--accent);
+  border-left: 2px solid var(--accent);
+}
+
+.week-cell.job {
+  background: rgba(74, 103, 65, 0.15);
+  color: #7aaa6a;
+  font-size: 0.6rem;
+}
+
+.week-cell.job::after {
+  content: 'Work ✓';
+}
+
+.week-cell.free {
+  background: var(--bg);
+  color: var(--text-dim);
+}
+
+.week-cell:hover {
+  opacity: 0.8;
+}
+
+.week-row.lunch .week-cell {
+  background: var(--bg-2);
+}
+
+.lunch-label {
+  font-size: 0.6rem;
+  color: var(--text-dim);
+  letter-spacing: 0.1em;
+  grid-column: 1 / -1;
+}
+
+/* ── Monthly grid ── */
+.month-grid {
+  border: 1px solid var(--border);
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.month-header-row,
+.month-row {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  border-bottom: 1px solid var(--border);
+}
+
+.month-day-label {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  padding: 0.5rem;
+  text-align: center;
+  background: var(--bg-3);
+  border-right: 1px solid var(--border);
+}
+
+.month-day-label.weekend {
+  color: var(--text-dim);
+  opacity: 0.5;
+}
+
+.month-cell {
+  padding: 0.5rem;
+  border-right: 1px solid var(--border);
+  min-height: 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.month-cell.class  { background: rgba(200, 184, 154, 0.08); }
+.month-cell.job    { background: rgba(74, 103, 65, 0.12); }
+.month-cell.free   { background: var(--bg); }
+.month-cell.weekend { background: var(--bg-2); opacity: 0.5; }
+.month-cell.empty  { background: var(--bg-2); opacity: 0.3; }
+
+.day-num {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  font-weight: 700;
+}
+
+.month-cell.class .day-num  { color: var(--accent); }
+.month-cell.job .day-num    { color: #7aaa6a; }
+
+.day-tag {
+  font-size: 0.6rem;
+  color: var(--text-dim);
+  line-height: 1.4;
+}
+
+/* ── Insight box ── */
+.schedule-insight {
+  background: var(--bg-3);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  padding: 1rem 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.schedule-insight h4 {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent-dim);
+  margin-bottom: 0.5rem;
+}
+
+.schedule-insight p {
+  font-size: 0.83rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+/* ============================================
    FAQ
    ============================================ */
 
@@ -1339,6 +1579,193 @@ code {
   line-height: 1.7;
   background: var(--bg-3);
   border-top: 1px solid var(--border);
+}
+
+/* ============================================
+   GLOSSARY
+   ============================================ */
+
+.glossary-search-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--bg-3);
+  border: 1px solid var(--border-light);
+  padding: 0.5rem 1rem;
+  margin-bottom: 1.5rem;
+  max-width: 400px;
+}
+
+.glossary-search-wrap i {
+  color: var(--text-dim);
+  font-size: 0.85rem;
+}
+
+.glossary-search-wrap input {
+  flex: 1;
+  background: none;
+  border: none;
+  outline: none;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+.glossary-search-wrap input::placeholder {
+  color: var(--text-dim);
+}
+
+.glossary-section {
+  margin-bottom: 2rem;
+}
+
+.glossary-cat {
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent-dim);
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.glossary-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+}
+
+.glossary-item {
+  background: var(--bg);
+  padding: 0.875rem 1.25rem;
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 1rem;
+  align-items: baseline;
+  transition: background 0.15s;
+}
+
+.glossary-item:hover {
+  background: var(--bg-3);
+}
+
+.glossary-item.hidden {
+  display: none;
+}
+
+.gterm {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.gdef {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* ============================================
+   USEFUL LINKS
+   ============================================ */
+
+.links-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.links-section h3 {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.links-section h3 i {
+  color: var(--accent-dim);
+}
+
+.links-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+}
+
+.link-item {
+  background: var(--bg);
+  padding: 0.875rem 1.25rem;
+  display: grid;
+  grid-template-columns: 200px 1fr auto;
+  gap: 1rem;
+  align-items: center;
+  text-decoration: none;
+  transition: background 0.15s;
+}
+
+.link-item:hover {
+  background: var(--bg-3);
+}
+
+.link-item:hover .link-name {
+  color: var(--accent);
+}
+
+.link-item:hover i {
+  color: var(--accent);
+}
+
+.link-name {
+  font-family: var(--font-display);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--white);
+  transition: color 0.15s;
+}
+
+.link-desc {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.link-item i {
+  color: var(--text-dim);
+  font-size: 0.75rem;
+  transition: color 0.15s;
+  flex-shrink: 0;
+}
+
+@media (max-width: 600px) {
+  .glossary-item {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
+
+  .link-item {
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+  }
+
+  .link-desc {
+    grid-column: 1;
+    grid-row: 2;
+  }
 }
 
 /* ============================================
