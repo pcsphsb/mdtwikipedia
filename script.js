@@ -192,18 +192,18 @@
   // Index — add any searchable content here
   const searchIndex = [
     // Modules
-    { title: 'Business Models and Innovation', page: 'modules', context: 'Core · Digital — Business Model Canvas, group pitch' },
-    { title: 'Strategic Management', page: 'modules', context: 'Core — Porter, RBV, Blue Ocean, cold-calling' },
-    { title: 'Data-Driven Decision Making', page: 'modules', context: 'Elective · Digital — Python, Tableau, dashboard project' },
-    { title: 'Organizational Behavior', page: 'modules', context: 'Core — change management, leadership, closed-book exam' },
-    { title: 'AI & Machine Learning for Managers', page: 'modules', context: 'Elective · Digital — consulting report, guest speakers' },
-    { title: 'Innovation Management', page: 'modules', context: 'Elective — design thinking, agile, pitch presentation' },
+    { title: 'Business Models and Innovation', page: 'modules', context: 'Core · Digital — Business Model Canvas, Business Pitch, Group projects' },
+    { title: 'Supply Chain Management and Digital Transformation', page: 'modules', context: 'Core · Digital — Research paper, defense, case studies' },
+    { title: 'Digital Sales and Marketing Strategies', page: 'modules', context: 'Core · Digital — Traditional exam, class activities' },
+    { title: 'Cyber Risks and Data Protection', page: 'modules', context: 'Core · Digital — Final essay, case studies' },
+    { title: 'Data Science and Methods', page: 'modules', context: 'Core · Digital — Traditional exam, homeworks, class activities, case studies' },
+    { title: 'Communication & Presentation', page: 'modules', context: 'Elective — Presentations' },
     // FAQ
     { title: 'Is the program fully in English?', page: 'faq', context: 'Core lectures in English, some electives in German' },
     { title: 'How hard is it to find housing?', page: 'faq', context: 'WG-Gesucht, Immoscout24, Studierendenwerk dorms' },
     { title: 'Can I work while studying?', page: 'faq', context: 'Werkstudent, 120 full days for non-EU students' },
-    { title: 'Do I need a German bank account?', page: 'faq', context: 'DKB, N26, Commerzbank student accounts' },
-    { title: 'How do I get an Anmeldung?', page: 'faq', context: 'City registration, Einwohnermeldeamt, within 14 days' },
+    { title: 'Do I need a German bank account?', page: 'faq', context: 'Commerzbank student accounts' },
+    { title: 'How do I get an Anmeldung?', page: 'faq', context: 'City registration within 14 days' },
     { title: 'Are exams retakeable?', page: 'faq', context: 'Prüfungsordnung, second attempt rules' },
     // Professors
     { title: 'Professor Profiles', page: 'professors', context: 'Teaching styles, exam approach, communication tips' },
@@ -213,9 +213,8 @@
     { title: 'Side Income Options', page: 'budget', context: 'Werkstudent, HiWi, freelancing, visa conditions' },
     { title: 'Scholarships & Funding', page: 'budget', context: 'DAAD, Deutschlandstipendium, foundation scholarships' },
     // Language
-    { title: 'University Language Center (SpZ)', page: 'language', context: 'Free German courses for enrolled students' },
+    { title: 'University Language Center (SZHB)', page: 'language', context: 'Free German courses for enrolled students' },
     { title: 'Free Online German Courses', page: 'language', context: 'Deutsche Welle, Language Transfer, Duolingo' },
-    { title: 'Volkshochschule (VHS)', page: 'language', context: 'Affordable city adult education, best value' },
   ];
 
   function runSearch(query) {
