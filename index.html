@@ -204,6 +204,7 @@
         <button class="filter-btn active" data-filter="all">All</button>
         <button class="filter-btn" data-filter="core">Core</button>
         <button class="filter-btn" data-filter="elective">Elective</button>
+        <button class="filter-btn" data-filter="theory">Theory</button>
         <button class="filter-btn" data-filter="digital">Digital</button>
       </div>
 
@@ -283,9 +284,9 @@
 
         </div>
 
-        <div class="module-item" data-cat="core digital">
+        <div class="module-item" data-cat="core theory digital">
           <div class="module-meta">
-            <span class="module-tag">Core · Digital</span>
+            <span class="module-tag">Core · Theory · Digital</span>
             <div class="module-rating">
               <span class="stars">★★★★☆</span>
               <span class="rating-num">4.5</span>
@@ -325,9 +326,9 @@
 
         </div>
 
-        <div class="module-item" data-cat="core digital">
+        <div class="module-item" data-cat="core theory digital">
           <div class="module-meta">
-            <span class="module-tag">Core · Digital</span>
+            <span class="module-tag">Core · Theory · Digital</span>
             <div class="module-rating">
               <span class="stars">★★★★☆</span>
               <span class="rating-num">4.0</span>
@@ -363,9 +364,9 @@
 
         </div>
 
-        <div class="module-item" data-cat="core digital">
+        <div class="module-item" data-cat="core theory digital">
           <div class="module-meta">
-            <span class="module-tag">Core · Digital</span>
+            <span class="module-tag">Core · Theory · Digital</span>
             <div class="module-rating">
               <span class="stars">★★★★☆</span>
               <span class="rating-num">4.5</span>
@@ -479,9 +480,9 @@
 
         <!--- SECOND SEMESTER --->
 
-        <div class="module-item" data-cat="core digital">
+        <div class="module-item" data-cat="core theory digital">
           <div class="module-meta">
-            <span class="module-tag">Core · Digital</span>
+            <span class="module-tag">Core · Theory · Digital</span>
             <div class="module-rating">
               <span class="stars">★★★★☆</span>
               <span class="rating-num">4.0</span>
@@ -520,9 +521,9 @@
 
         </div>
 
-        <div class="module-item" data-cat="core">
+        <div class="module-item" data-cat="core theory">
           <div class="module-meta">
-            <span class="module-tag">Core</span>
+            <span class="module-tag">Core · Theory</span>
             <div class="module-rating">
               <span class="stars">★★★★☆</span>
               <span class="rating-num">3.8</span>
@@ -561,9 +562,9 @@
 
         </div>
 
-        <div class="module-item" data-cat="core digital">
+        <div class="module-item" data-cat="core theory digital">
           <div class="module-meta">
-            <span class="module-tag">Core · Digital</span>
+            <span class="module-tag">Core · Theory · Digital</span>
             <div class="module-rating">
               <span class="stars">★★★★☆</span>
               <span class="rating-num">3.7</span>
@@ -602,9 +603,9 @@
 
         </div>
 
-        <div class="module-item" data-cat="core digital">
+        <div class="module-item" data-cat="core theory digital">
           <div class="module-meta">
-            <span class="module-tag">Core · Digital</span>
+            <span class="module-tag">Core · Theory · Digital</span>
             <div class="module-rating">
               <span class="stars">★★★★☆</span>
               <span class="rating-num">4.2</span>
@@ -2025,7 +2026,7 @@
           <h3><i class="fa-solid fa-mobile-screen"></i> Useful Apps & Daily Life</h3>
           <div class="links-list">
             <a href="https://www.aldi.de" target="_blank" class="link-item">
-              <span class="link-name">ALDI / LIDL</span>
+              <span class="link-name">ALDI</span>
               <span class="link-desc">Cheapest supermarkets. Weekly deals on electronics, clothing, food</span>
               <i class="fa-solid fa-arrow-up-right-from-square"></i>
             </a>
@@ -2102,8 +2103,33 @@
           </ul>
         </div>
 
+        <div class="info-block highlight">
+          <h3>Option 1: Anonymous form (no account needed)</h3>
+          <p>The easiest and most private way to contribute. You don't need a GitHub or Google account, and
+            we don't collect your email or name &mdash; only what you type in the form. Everything is reviewed
+            against the ground rules above before it goes live.</p>
+
+          <!--- ANONYMOUS SUBMISSION FORM (Google Forms embed) -------------------------
+                Active. To swap in a different form later, replace the form ID
+                (1FAIpQL...) in BOTH the iframe src and the "open in a new tab" link below
+                with the ID from your Google Form's "Send > < >  Embed HTML" link. --->
+
+          <div class="form-embed">
+            <iframe
+              src="https://docs.google.com/forms/d/e/1FAIpQLScc-MLQFPgZaRPw1FPBbRu3as7ONGsbXf0eNTo1sEQaKox2oA/viewform?embedded=true"
+              title="Anonymous MDT Wiki contribution form"
+              loading="lazy">
+              Loading the submission form&hellip;
+            </iframe>
+          </div>
+
+          <p style="margin-top:0.75rem;">Form not loading? You can also
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScc-MLQFPgZaRPw1FPBbRu3as7ONGsbXf0eNTo1sEQaKox2oA/viewform" target="_blank">open it in a new tab</a>.</p>
+        </div>
+
         <div class="info-block">
-          <h3>Option 1: GitHub (recommended)</h3>
+          <h3>Option 2: GitHub (for bigger edits)</h3>
+          <p>Best if you want to edit content directly. Requires a GitHub account.</p>
           <ol class="wiki-list ordered">
             <li>Go to <a href="https://github.com/pcsphsb/mdtwikipedia" target="_blank">github.com/pcsphsb/mdtwikipedia</a></li>
             <li>Open the relevant HTML file (e.g. <code>index.html</code> for a module)</li>
@@ -2114,8 +2140,9 @@
         </div>
 
         <div class="info-block">
-          <h3>Option 2: Contact the Admin (me)</h3>
-          <p>If you're not comfortable with GitHub, write up your addition (module notes, professor profile, FAQ answer) as plain text and send it to the current wiki maintainer.</p>
+          <h3>Option 3: Email (fallback)</h3>
+          <p>Prefer the anonymous form for privacy. If you'd rather send plain text (module notes, professor
+            profile, FAQ answer) directly, you can still reach the maintainer here.</p>
           <p style="margin-top:0.75rem;">Contact: <a href="mailto:mdtwikipedia@gmail.com">mdtwikipedia@gmail.com</a></p>
         </div>
 
