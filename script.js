@@ -119,7 +119,7 @@
   // ── Hash routing ───────────────────────────
   function routeFromHash() {
     const hash = window.location.hash.replace('#', '');
-    const validPages = ['home','modules','professors','language','budget','faq','contribute','portals','schedule','glossary','links'];
+    const validPages = ['home','modules','professors','language','budget','faq','contribute','portals','schedule','glossary','links','assistants'];
     if (hash && validPages.includes(hash)) {
       showPage(hash);
     } else {
@@ -215,6 +215,9 @@
     // Language
     { title: 'University Language Center (SZHB)', page: 'language', context: 'Free German courses for enrolled students' },
     { title: 'Free Online German Courses', page: 'language', context: 'Deutsche Welle, Language Transfer, Duolingo' },
+    // Assistants
+    { title: 'Assistants', page: 'assistants', context: 'MDT digitalization projects, student built helpers and tools' },
+    { title: 'MDT Excursion Chatbot', page: 'assistants', context: 'Chatbot that answers questions about the MDT excursion' },
   ];
 
   function runSearch(query) {
